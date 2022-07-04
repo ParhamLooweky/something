@@ -10,7 +10,10 @@ public function index(){
     return view('public.home.index');
 }
 
-public function contact(){
+public function Contact(){
     return view('public.contact.contact');
+}
+public function Simple(){
+    return view('public.layout.simple');
 }
 }

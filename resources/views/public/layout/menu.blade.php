@@ -1,31 +1,3 @@
-<div class="top-bar">
-    <div class="container">
-        <div class="top top-left">
-            <div class="sidebar-widget text-left small-screen-center widget_text"> Opening Hours: 09:00 - 17:00 <strong>Monday</strong> to <strong>Friday</strong> </div>
-        </div>
-        <div class="top top-right">
-            <div class="sidebar-widget text-right small-screen-center widget_nav_menu" id="nav_menu-5">
-                <div class="menu-top-bar-menu-container">
-                    <ul class="menu">
-                        <li> <a href="{{route('billing')}}">Checkout</a> </li>
-                        <li> <a href="{{route('terms')}}">Terms</a> </li>
-                        <li> <a href="{{route('faq')}}">FAQ</a> </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="sidebar-widget text-right small-screen-center widget_search">
-                <form action="shop-index.html" method="get" name="searchform">
-                    <div class="input-group">
-                        <input class="form-control" id="s" name="s" placeholder="Search" type="text"> <span class="input-group-btn">
-                            <button class="btn btn-primary" type="submit" id="searchsubmit" value="Search">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span> </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="menu navbar navbar-static-top header-logo-center-menu-below oxy-mega-menu text-caps" id="masthead">
     <div class="logo-navbar container-logo">
         <div class="container">
@@ -79,7 +51,7 @@
                             <ul class="dropdown-menu dropdown-menu-left ">
                                 <li class="menu-item"> <a href="/shop-mens-category.html">Simple Category</a> </li>
                                 <li class="menu-item"> <a href="/shop-video-category.html">Video Category</a> </li>
-                                <li class="menu-item"> <a href="/shop-simple-product.html">Single Product</a> </li>
+                                <li class="menu-item"> <a href="/{{route('simple')}}">Single Product</a> </li>
                                 <li class="menu-item"> <a href="{{route('cart')}}">Cart</a> </li>
                                 <li class="menu-item"> <a href="{{route('billing')}}">Checkout</a> </li>
                             </ul>
@@ -90,8 +62,8 @@
                     </ul>
                 </div>
                 <div class="menu-sidebar">
-                    <div  class="sidebar-widget widget_shopping_cart">
-                        <h3 class="sidebar-header">Cart</h3>
+                    <div style="background-color: red"  class="sidebar-widget widget_shopping_cart">
+                        <h3  href="{{route('cart') }}" class="sidebar-header">Cart</h3>
                         <div class="widget_shopping_cart_content">
                             <div class="mini-cart-overview dropdown navbar-right">
                                 <a data-toggle="dropdown"> <i class="icon icon-bag animated pulse-two"></i> <span class="mini-cart-count">5</span> <span href="{{route('cart')}}" class="amount">$114.96</span> </a>
@@ -99,10 +71,10 @@
                                     <li>
                                         <div class="product-mini">
                                             <div class="product-image">
-                                                <a href="shop-simple-product.html"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90"> </a>
+                                                <a href="{{route('simple')}}"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90"> </a>
                                             </div>
                                             <div class="product-details">
-                                                <h4 class="product-details-heading"><a href="shop-simple-product.html">Mens Sporty Hoodie</a></h4>
+                                                <h4 class="product-details-heading"><a href="{{route('simple')}}">Mens Sporty Hoodie</a></h4>
                                                 <p></p>
                                                 <p><span class="quantity">1 × <span class="amount">$24.99</span></span>
                                                 </p><a class="remove" href="#" title="Remove this item">×</a> </div>
@@ -111,10 +83,10 @@
                                     <li>
                                         <div class="product-mini">
                                             <div class="product-image">
-                                                <a href="shop-simple-product.html"> <img alt="jacket1-1" height="114" src="{{ asset('public') }}/assets/images/shop/jacket1-1-90x114.jpg" width="90"> </a>
+                                                <a href="{{route('simple')}}"> <img alt="jacket1-1" height="114" src="{{ asset('public') }}/assets/images/shop/jacket1-1-90x114.jpg" width="90"> </a>
                                             </div>
                                             <div class="product-details">
-                                                <h4 class="product-details-heading"><a href="shop-simple-product.html">Mens Bomber Jacket</a></h4>
+                                                <h4 class="product-details-heading"><a href="{{route('simple')}}">Mens Bomber Jacket</a></h4>
                                                 <p></p>
                                                 <p><span class="quantity">1 × <span class="amount">$32.99</span></span>
                                                 </p><a class="remove" href="#" title="Remove this item">×</a> </div>
@@ -123,10 +95,10 @@
                                     <li>
                                         <div class="product-mini">
                                             <div class="product-image">
-                                                <a href="shop-simple-product.html"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> </a>
+                                                <a href="{{route('simple')}}"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> </a>
                                             </div>
                                             <div class="product-details">
-                                                <h4 class="product-details-heading"><a href="shop-simple-product.html">White Skirt</a></h4>
+                                                <h4 class="product-details-heading"><a href="{{route('simple')}}">White Skirt</a></h4>
                                                 <p></p>
                                                 <p><span class="quantity">1 × <span class="amount">$20.00</span></span>
                                                 </p><a class="remove" href="#" title="Remove this item">×</a> </div>
@@ -135,10 +107,10 @@
                                     <li>
                                         <div class="product-mini">
                                             <div class="product-image">
-                                                <a href="shop-simple-product.html"> <img alt="kidspants2-1" height="105" src="{{ asset('public') }}/assets/images/shop/kidspants2-1-90x105.jpg" width="90"> </a>
+                                                <a href="{{route('simple')}}"> <img alt="kidspants2-1" height="105" src="{{ asset('public') }}/assets/images/shop/kidspants2-1-90x105.jpg" width="90"> </a>
                                             </div>
                                             <div class="product-details">
-                                                <h4 class="product-details-heading"><a href="shop-simple-product.html">Lazy Sweatpants</a></h4>
+                                                <h4 class="product-details-heading"><a href="{{route('simple')}}">Lazy Sweatpants</a></h4>
                                                 <p></p>
                                                 <p><span class="quantity">1 × <span class="amount">$16.99</span></span>
                                                 </p><a class="remove" href="#" title="Remove this item">×</a> </div>
@@ -147,10 +119,10 @@
                                     <li>
                                         <div class="product-mini">
                                             <div class="product-image">
-                                                <a href="shop-simple-product.html"> <img alt="kidsjacket2-1" height="105" src="{{ asset('public') }}/assets/images/shop/kidsjacket2-1-90x105.jpg" width="90"> </a>
+                                                <a href="{{route('simple')}}"> <img alt="kidsjacket2-1" height="105" src="{{ asset('public') }}/assets/images/shop/kidsjacket2-1-90x105.jpg" width="90"> </a>
                                             </div>
                                             <div class="product-details">
-                                                <h4 class="product-details-heading"><a href="shop-simple-product.html">Patterned Hooded Jacket</a></h4>
+                                                <h4 class="product-details-heading"><a href="{{route('simple')}}">Patterned Hooded Jacket</a></h4>
                                                 <p></p>
                                                 <p><span class="quantity">1 × <span class="amount">$19.99</span></span>
                                                 </p><a class="remove" href="#" title="Remove this item">×</a> </div>

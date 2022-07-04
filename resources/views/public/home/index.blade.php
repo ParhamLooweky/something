@@ -1,3 +1,4 @@
+
 @extends('public.layout.index')
 
 
@@ -46,7 +47,7 @@
                 <div class="woocommerce columns-4">
                     <div class="row">
                         <ul class="products">
-                            <li class="product col-md-3"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-3"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                             <div class="product-image">
                                 <div class="product-image-front">
@@ -62,7 +63,7 @@
                         </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Ra Ra Skirt</a>
+                                <a href="{{route('simple')}}">Ra Ra Skirt</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Skirts</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,
@@ -81,7 +82,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-3">
-                                <a href="shop-simple-product.html"> <span class="onsale">Sale!</span>
+                                <a href="{{route('simple')}}"> <span class="onsale">Sale!</span>
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="bag1-1" height="893" src="{{ asset('public') }}/assets/images/shop/bag1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="bag1-2" src="{{ asset('public') }}/assets/images/shop/bag1-2-700x893.jpg"> </div>
@@ -91,7 +92,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Black and White</a>
+                                <a href="{{route('simple')}}">Black and White</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Bags</a>
                             </span>
@@ -108,7 +109,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-3">
-                                <a href="shop-simple-product.html"> <span class="onsale">Sale!</span>
+                                <a href="{{route('simple')}}"> <span class="onsale">Sale!</span>
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="bag3-1" height="893" src="{{ asset('public') }}/assets/images/shop/bag3-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="bag3-2" src="{{ asset('public') }}/assets/images/shop/bag3-2-700x893.jpg"> </div>
@@ -118,7 +119,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Slick Red bag</a>
+                                <a href="{{route('simple')}}">Slick Red bag</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Bags</a>
                             </span>
@@ -133,7 +134,7 @@
                                     <a class="add-to-cart-button" href="#" rel="nofollow"> <i class="icon-bag"></i> </a>
                                 </div>
                             </li>
-                            <li class="product col-md-3"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-3"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                         <div class="product-image">
                             <div class="product-image-front">
@@ -150,7 +151,7 @@
                         </div></a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">All the Bags</a>
+                                <a href="{{route('simple')}}">All the Bags</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Bags</a>
                             </span>
@@ -213,7 +214,7 @@
                 <div class="woocommerce columns-6">
                     <div class="row">
                         <ul class="products">
-                            <li class="product col-md-2"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-2"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                             <div class="product-image">
                                 <div class="product-image-front">
@@ -232,7 +233,7 @@
                         </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">White Skirt</a>
+                                <a href="{{route('simple')}}">White Skirt</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Jeans</a>,
                                 <a href="shop-mens-category.html" rel="tag">Skirts</a>,
@@ -251,7 +252,7 @@
                                     <a class="add-to-cart-button" href="#" rel="nofollow"> <i class="icon-bag"></i> </a>
                                 </div>
                             </li>
-                            <li class="product col-md-2"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-2"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                             <div class="product-image">
                                 <div class="product-image-front">
@@ -267,7 +268,7 @@
                         </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Ra Ra Skirt</a>
+                                <a href="{{route('simple')}}">Ra Ra Skirt</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Skirts</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,
@@ -286,7 +287,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html">
+                                <a href="{{route('simple')}}">
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="jeans1-1" height="893" src="{{ asset('public') }}/assets/images/shop/jeans1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="jeans1-2" src="{{ asset('public') }}/assets/images/shop/jeans1-2-700x893.jpg"> </div>
@@ -296,7 +297,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Womens Jeans</a>
+                                <a href="{{route('simple')}}">Womens Jeans</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Jeans</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,
@@ -311,7 +312,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html"> <span class="onsale">Sale!</span>
+                                <a href="{{route('simple')}}"> <span class="onsale">Sale!</span>
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="top1-1" height="893" src="{{ asset('public') }}/assets/images/shop/top1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="top1-2" src="{{ asset('public') }}/assets/images/shop/top1-2-700x893.jpg"> </div>
@@ -321,7 +322,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Top Fancy</a>
+                                <a href="{{route('simple')}}">Top Fancy</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Jeans</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,
@@ -339,7 +340,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html">
+                                <a href="{{route('simple')}}">
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="top2-1" height="893" src="{{ asset('public') }}/assets/images/shop/top2-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="top2-2" src="{{ asset('public') }}/assets/images/shop/top2-2-700x893.jpg"> </div>
@@ -349,7 +350,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Top Black</a>
+                                <a href="{{route('simple')}}">Top Black</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Jeans</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,
@@ -363,7 +364,7 @@
                                     <a class="add-to-cart-button" href="#" rel="nofollow"> <i class="icon-bag"></i> </a>
                                 </div>
                             </li>
-                            <li class="product col-md-2"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-2"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                         <div class="product-image">
                             <div class="product-image-front">
@@ -380,7 +381,7 @@
                         </div></a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Fancy Dress</a>
+                                <a href="{{route('simple')}}">Fancy Dress</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Skirts</a>,
                                 <a href="shop-mens-category.html" rel="tag">Womens</a>
@@ -426,7 +427,7 @@
                 <div class="woocommerce columns-6">
                     <div class="row">
                         <ul class="products">
-                            <li class="product col-md-2"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-2"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                             <div class="product-image">
                                 <div class="product-image-front">
@@ -442,7 +443,7 @@
                         </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Bomber in Jersey</a>
+                                <a href="{{route('simple')}}">Mens Bomber in Jersey</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Hoodies</a>,
                                 <a href="shop-mens-category.html" rel="tag">Jackets</a>,
@@ -461,7 +462,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html">
+                                <a href="{{route('simple')}}">
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="jacket1-1" height="893" src="{{ asset('public') }}/assets/images/shop/jacket1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"><img alt="jacket1-1" src="{{ asset('public') }}/assets/images/shop/jacket1-2-700x893.jpg"></div>
@@ -471,7 +472,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Bomber Jacket</a>
+                                <a href="{{route('simple')}}">Mens Bomber Jacket</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Hoodies</a>,
                                 <a href="shop-mens-category.html" rel="tag">Jackets</a>,
@@ -488,7 +489,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html">
+                                <a href="{{route('simple')}}">
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="hoodie1-1" height="893" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="hoodie1-2" src="{{ asset('public') }}/assets/images/shop/hoodie1-2-700x893.jpg"> </div>
@@ -500,7 +501,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Sporty Hoodie</a>
+                                <a href="{{route('simple')}}">Mens Sporty Hoodie</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Hoodies</a>,
                                 <a href="shop-mens-category.html" rel="tag">Jackets</a>,
@@ -515,7 +516,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html"> <span class="onsale">Sale!</span>
+                                <a href="{{route('simple')}}"> <span class="onsale">Sale!</span>
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="shirt1-1" height="893" src="{{ asset('public') }}/assets/images/shop/shirt1-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="shirt1-2" src="{{ asset('public') }}/assets/images/shop/shirt1-2-700x893.jpg"> </div>
@@ -527,7 +528,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Vintage Shirt</a>
+                                <a href="{{route('simple')}}">Mens Vintage Shirt</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Jacket</a>,
                                 <a href="shop-mens-category.html" rel="tag">Mens</a>,
@@ -545,7 +546,7 @@
                                 </div>
                             </li>
                             <li class="product col-md-2">
-                                <a href="shop-simple-product.html">
+                                <a href="{{route('simple')}}">
                                     <div class="product-image">
                                         <div class="product-image-front"> <img alt="shirt2-1" height="893" src="{{ asset('public') }}/assets/images/shop/shirt2-1-700x893.jpg" width="700"> </div>
                                         <div class="product-image-back"> <img alt="shirt2-2" src="{{ asset('public') }}/assets/images/shop/shirt2-2-700x893.jpg"> </div>
@@ -557,7 +558,7 @@
                                 </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Luxury Black Shirt</a>
+                                <a href="{{route('simple')}}">Mens Luxury Black Shirt</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Mens</a>,
                                 <a href="shop-mens-category.html" rel="tag">Shirts</a>
@@ -570,7 +571,7 @@
                                     <a class="add-to-cart-button" href="#" rel="nofollow"> <i class="icon-bag"></i> </a>
                                 </div>
                             </li>
-                            <li class="product col-md-2"> <a href="shop-simple-product.html"><span class="onsale">Sale!</span>
+                            <li class="product col-md-2"> <a href="{{route('simple')}}"><span class="onsale">Sale!</span>
 
                         <div class="product-image">
                             <div class="product-image-front">
@@ -587,7 +588,7 @@
                         </div></a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="shop-simple-product.html">Mens Casual Hoodie</a>
+                                <a href="{{route('simple')}}">Mens Casual Hoodie</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Hoodies</a>,
                                 <a href="shop-mens-category.html" rel="tag">Mens</a>
@@ -661,13 +662,13 @@
                 <h3 class="sidebar-header">Top Rated Products</h3>
                 <ul class="product_list_widget">
                     <li>
-                        <a href="shop-simple-product.html" title="White Skirt"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> White Skirt </a>
+                        <a href="{{route('simple')}}" title="White Skirt"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> White Skirt </a>
                         <div class="star-rating" title="Rated 5.00 out of 5"> <span style="width:100%"><strong class="rating">5.00</strong> out of 5</span> </div> <del><span class="amount">&#36;30.00</span></del> <ins><span class="amount">&#36;20.00</span></ins> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Mens Luxury Black Shirt"> <img alt="shirt2-1" height="114" src="{{ asset('public') }}/assets/images/shop/shirt2-1-90x114.jpg" width="90"> Mens Luxury Black Shirt </a>
+                        <a href="{{route('simple')}}" title="Mens Luxury Black Shirt"> <img alt="shirt2-1" height="114" src="{{ asset('public') }}/assets/images/shop/shirt2-1-90x114.jpg" width="90"> Mens Luxury Black Shirt </a>
                         <div class="star-rating" title="Rated 5.00 out of 5"> <span style="width:100%"><strong class="rating">5.00</strong> out of 5</span> </div><span class="amount">&#36;79.99</span> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Mens Sporty Hoodie"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90"> Mens Sporty Hoodie </a>
+                        <a href="{{route('simple')}}" title="Mens Sporty Hoodie"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90"> Mens Sporty Hoodie </a>
                         <div class="star-rating" title="Rated 4.00 out of 5"> <span style="width:80%"><strong class="rating">4.00</strong> out of 5</span> </div><span class="amount">&#36;24.99</span> </li>
                 </ul>
             </div>
@@ -677,11 +678,11 @@
                 <h3 class="sidebar-header">Featured Products</h3>
                 <ul class="product_list_widget">
                     <li>
-                        <a href="shop-simple-product.html" title="All the Bags"> <img alt="bag5-1" height="114" src="{{ asset('public') }}/assets/images/shop/bag5-1-90x114.jpg" width="90"> All the Bags </a> <span class="amount">&#36;12.00</span>&ndash;<span class="amount">&#36;25.00</span> </li>
+                        <a href="{{route('simple')}}" title="All the Bags"> <img alt="bag5-1" height="114" src="{{ asset('public') }}/assets/images/shop/bag5-1-90x114.jpg" width="90"> All the Bags </a> <span class="amount">&#36;12.00</span>&ndash;<span class="amount">&#36;25.00</span> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Woo Colorful Dress"> <img alt="dress2-1" height="114" src="{{ asset('public') }}/assets/images/shop/dress2-1-90x114.jpg" width="90"> Woo Colorful Dress </a> <span class="amount">&#36;20.00</span> </li>
+                        <a href="{{route('simple')}}" title="Woo Colorful Dress"> <img alt="dress2-1" height="114" src="{{ asset('public') }}/assets/images/shop/dress2-1-90x114.jpg" width="90"> Woo Colorful Dress </a> <span class="amount">&#36;20.00</span> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Woo Black Jeans"> <img alt="jeans2-1" height="114" src="{{ asset('public') }}/assets/images/shop/jeans2-1-90x114.jpg" width="90"> Woo Black Jeans </a> <span class="amount">&#36;80.00</span> </li>
+                        <a href="{{route('simple')}}" title="Woo Black Jeans"> <img alt="jeans2-1" height="114" src="{{ asset('public') }}/assets/images/shop/jeans2-1-90x114.jpg" width="90"> Woo Black Jeans </a> <span class="amount">&#36;80.00</span> </li>
                 </ul>
             </div>
         </div>
@@ -690,11 +691,11 @@
                 <h3 class="sidebar-header">On Sale</h3>
                 <ul class="product_list_widget">
                     <li>
-                        <a href="shop-simple-product.html" title="White Skirt"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> White Skirt </a> <del><span class="amount">&#36;30.00</span></del> <ins><span class="amount">&#36;20.00</span></ins> </li>
+                        <a href="{{route('simple')}}" title="White Skirt"> <img alt="skirt1-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt1-1-90x114.jpg" width="90"> White Skirt </a> <del><span class="amount">&#36;30.00</span></del> <ins><span class="amount">&#36;20.00</span></ins> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Ra Ra Skirt"> <img alt="skirt4-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt4-1-90x114.jpg" width="90"> Ra Ra Skirt </a> <del><span class="amount">&#36;49.99</span></del> <ins><span class="amount">&#36;39.99</span></ins> </li>
+                        <a href="{{route('simple')}}" title="Ra Ra Skirt"> <img alt="skirt4-1" height="114" src="{{ asset('public') }}/assets/images/shop/skirt4-1-90x114.jpg" width="90"> Ra Ra Skirt </a> <del><span class="amount">&#36;49.99</span></del> <ins><span class="amount">&#36;39.99</span></ins> </li>
                     <li>
-                        <a href="shop-simple-product.html" title="Woo Top Fancy"> <img alt="top1-1" height="114" src="{{ asset('public') }}/assets/images/shop/top1-1-90x114.jpg" width="90"> Woo Top Fancy </a> <del><span class="amount">&#36;33.00</span></del> <ins><span class="amount">&#36;24.00</span></ins> </li>
+                        <a href="{{route('simple')}}" title="Woo Top Fancy"> <img alt="top1-1" height="114" src="{{ asset('public') }}/assets/images/shop/top1-1-90x114.jpg" width="90"> Woo Top Fancy </a> <del><span class="amount">&#36;33.00</span></del> <ins><span class="amount">&#36;24.00</span></ins> </li>
                 </ul>
             </div>
         </div>
@@ -703,13 +704,13 @@
                 <h3 class="sidebar-header">Recent Reviews</h3>
                 <ul class="product_list_widget">
                     <li>
-                        <a href="shop-simple-product.html"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90">Mens Sporty Hoodie </a>
+                        <a href="{{route('simple')}}"> <img alt="hoodie1-1" height="114" src="{{ asset('public') }}/assets/images/shop/hoodie1-1-90x114.jpg" width="90">Mens Sporty Hoodie </a>
                         <div class="star-rating" title="Rated 4 out of 5"> <span style="width:80%"><strong class="rating">4</strong> out of 5</span> </div><span class="reviewer">by Proistakis Manos</span> </li>
                     <li>
-                        <a href="shop-simple-product.html"><img alt="shirt2-1" height="114" src="{{ asset('public') }}/assets/images/shop/shirt2-1-90x114.jpg" width="90">Mens Luxury Black Shirt</a>
+                        <a href="{{route('simple')}}"><img alt="shirt2-1" height="114" src="{{ asset('public') }}/assets/images/shop/shirt2-1-90x114.jpg" width="90">Mens Luxury Black Shirt</a>
                         <div class="star-rating" title="Rated 5 out of 5"> <span style="width:100%"><strong class="rating">5</strong> out of 5</span> </div><span class="reviewer">by Proistakis Manos</span> </li>
                     <li>
-                        <a href="shop-simple-product.html"><img alt="dress1-1" height="114" src="{{ asset('public') }}/assets/images/shop/dress1-1-90x114.jpg" width="90">Woo Dress</a>
+                        <a href="{{route('simple')}}"><img alt="dress1-1" height="114" src="{{ asset('public') }}/assets/images/shop/dress1-1-90x114.jpg" width="90">Woo Dress</a>
                         <div class="star-rating" title="Rated 3 out of 5"> <span style="width:60%"><strong class="rating">3</strong> out of 5</span> </div><span class="reviewer">by oxygenna</span> </li>
                 </ul>
             </div>

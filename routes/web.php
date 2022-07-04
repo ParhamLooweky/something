@@ -21,3 +21,4 @@ Route::get('Faq',[\App\Http\Controllers\FaqController::class, 'FAQ'])->name('faq
 Route::get('Terms',[\App\Http\Controllers\TermController::class, 'Terms'])->name('terms');
 Route::get('Cart',[\App\Http\Controllers\PrController::class, 'Cart'])->name('cart');
 Route::get('Checkout',[\App\Http\Controllers\PrController::class, 'Billing'])->name('billing');
+Route::get('Simple',[\App\Http\Controllers\IndexController::class, 'Simple'])->name('simple');
