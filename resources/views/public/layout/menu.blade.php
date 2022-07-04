@@ -3,7 +3,7 @@
         <div class="container">
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target=".main-navbar" data-toggle="collapse" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="{{route('Index')}}"> <img alt="Lambda Theme - Shop" src="{{ asset('public') }}/assets/images/shop/lambda-shop.png"> </a>
+                <a class="navbar-brand" href="{{route('Index')}}"> <img alt="Lambda Theme - Shop" src="{{ asset('public') }}/assets/images/shop/lineg.webp"> </a>
                 <div class="logo-sidebar"></div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                         <li class="menu-item dropdown  "> <a href="{{ route('contacts') }}" >Contact</a> </li>
                     </ul>
                 </div>
-                <div class="menu-sidebar">
+                <div href="{{route('cart')}}" class="menu-sidebar">
                     <div style="background-color: red"  class="sidebar-widget widget_shopping_cart">
                         <h3  href="{{route('cart') }}" class="sidebar-header">Cart</h3>
                         <div class="widget_shopping_cart_content">

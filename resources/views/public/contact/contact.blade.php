@@ -1,4 +1,5 @@
 @extends('public.layout.index')
+@extends('mycss')
 @section('content')
 <article>
     <section class="section">
@@ -76,7 +77,7 @@
             </div>
         </div>
     </section>
-    
+
 </article>
 
 @endsection
