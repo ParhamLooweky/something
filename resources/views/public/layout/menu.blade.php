@@ -51,7 +51,7 @@
                             <ul class="dropdown-menu dropdown-menu-left ">
                                 <li class="menu-item"> <a href="/shop-mens-category.html">Simple Category</a> </li>
                                 <li class="menu-item"> <a href="/shop-video-category.html">Video Category</a> </li>
-                                <li class="menu-item"> <a href="/{{route('simple')}}">Single Product</a> </li>
+                                <li class="menu-item"> <a href="{{route('simple')}}">Single Product</a> </li>
                                 <li class="menu-item"> <a href="{{route('cart')}}">Cart</a> </li>
                                 <li class="menu-item"> <a href="{{route('billing')}}">Checkout</a> </li>
                             </ul>
@@ -62,7 +62,7 @@
                     </ul>
                 </div>
                 <div href="{{route('cart')}}" class="menu-sidebar">
-                    <div style="background-color: red"  class="sidebar-widget widget_shopping_cart">
+                    <div   class="sidebar-widget widget_shopping_cart">
                         <h3  href="{{route('cart') }}" class="sidebar-header">Cart</h3>
                         <div class="widget_shopping_cart_content">
                             <div class="mini-cart-overview dropdown navbar-right">
@@ -130,7 +130,7 @@
                                     </li>
                                     <li>
                                         <p class="total"><strong>Subtotal:</strong> <span class="amount">$114.96</span></p>
-                                        <div class="buttons"> <a href="shop-cart.html">View Cart</a> <a href="shop-checkout.html">Checkout</a> </div>
+                                        <div class="buttons"> <a href="{{route('cart')}}">View Cart</a> <a href="{{route('billing')}}">Checkout</a> </div>
                                     </li>
                                 </ul>
                                 <!-- end product list -->

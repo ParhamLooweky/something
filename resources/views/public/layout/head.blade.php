@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title> Shop</title>
+    <title> {{ App\Models\Tool::gettl() }}</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="//fonts.googleapis.com/css?family=Roboto:100,300,300italic,400,500,700,900%7CRoboto+Condensed:400,700&amp;subset=latin,latin" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ asset('public') }}/assets/css/extras.min.css">

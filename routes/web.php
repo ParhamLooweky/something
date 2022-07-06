@@ -22,3 +22,5 @@ Route::get('Terms',[\App\Http\Controllers\TermController::class, 'Terms'])->name
 Route::get('Cart',[\App\Http\Controllers\PrController::class, 'Cart'])->name('cart');
 Route::get('Checkout',[\App\Http\Controllers\PrController::class, 'Billing'])->name('billing');
 Route::get('Single',[\App\Http\Controllers\IndexController::class, 'Simple'])->name('simple');
+Route::get('Register',[\App\Http\Controllers\RegController::class, 'Register'])->name('register');
+Route::get('Login',[\App\Http\Controllers\RegController::class, 'Login'])->name('login');
