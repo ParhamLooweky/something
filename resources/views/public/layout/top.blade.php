@@ -1,15 +1,17 @@
 <div class="top-bar">
     <div class="container">
         <div class="top top-left">
-            <div class="sidebar-widget text-left small-screen-center widget_text"> Opening Hours: 09:00 - 17:00 <strong>Monday</strong> to <strong>Friday</strong> </div>
+            <div class="sidebar-widget text-left small-screen-center widget_text">
+             {{ Verta::today()->format('d M Y') }}
+
+             </div>
         </div>
         <div class="top top-right">
             <div class="sidebar-widget text-right small-screen-center widget_nav_menu" id="nav_menu-5">
                 <div class="menu-top-bar-menu-container">
                     <ul class="menu">
-                        <li> <a href="{{route('billing')}}">Checkout</a> </li>
-                        <li> <a href="{{route('terms')}}">Terms</a> </li>
-                        <li> <a href="{{route('faq')}}">FAQ</a> </li>
+                        <li> <a href="{{route('login')}}">Login</a> </li>
+                        <li> <a href="{{route('register')}}">Register</a> </li>
                     </ul>
                 </div>
             </div>
