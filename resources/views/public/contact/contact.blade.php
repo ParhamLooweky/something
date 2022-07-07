@@ -1,5 +1,4 @@
 @extends('public.layout.index')
-@extends('mycss')
 @section('content')
 <article>
     <section class="section">

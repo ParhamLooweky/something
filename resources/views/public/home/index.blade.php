@@ -1,5 +1,7 @@
 
 @extends('public.layout.index')
+@extends('public.layout.head')
+
 
 
 
@@ -10,12 +12,12 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="figure element-top-30 element-bottom-20 image-effect-scroll-right os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">
-                    <a class="figure-image" href="shop-mens-category.html" target="_self"> <img  alt="woman-sales" src="{{ asset('public') }}/assets/images/shop/dani.jpg"> </a>
+                    <a class="figure-image" href="{{route('malep')}}" target="_self"> <img  alt="woman-sales" src="{{ asset('public') }}/assets/images/shop/dani.jpg"> </a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="figure element-top-30 element-bottom-0 image-effect-scroll-left os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
-                    <a class="figure-image" href="shop-mens-category.html" target="_self"> <img alt="kids-sales" src="{{ asset('public') }}/assets/images/shop/milkman.jpg"> </a>
+                    <a class="figure-image" href="{{route('femalep')}}" target="_self"> <img alt="kids-sales" src="{{ asset('public') }}/assets/images/shop/milkman.jpg"> </a>
                 </div>
                 <div class="figure element-top-30 element-bottom-20 image-effect-scroll-left os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
                     <a class="figure-image" href="shop-mens-category.html" target="_self"> <img alt="mans-sales" src="{{ asset('public') }}/assets/images/shop/widee.jpg"> </a>
