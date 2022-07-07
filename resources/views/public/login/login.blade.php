@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-icon-group"> <i class="fa fa-shield"></i>
-                                        <textarea class="form-control" id="password" name="pass" placeholder="Password"  required=""></textarea>
+                                        <textarea style="width: 48%;height: 30px" class="form-control" id="password" name="pass" placeholder="Password"  required=""></textarea>
                                     </div>
                                     <p>
                                         <input type="submit" value="Login" class="btn btn-primary pull-right"> </p>
