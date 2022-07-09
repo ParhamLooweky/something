@@ -21,15 +21,14 @@
                                      data-flex-duration="600" data-flex-slideshow="true" data-flex-speed="7000" id="product-images">
                                     <ul class="slides product-gallery">
                                         <li data-thumb="assets/images/shop/top1-1-90x114.jpg">
-                                            <figure> <img alt="Top Fancy" src="assets/images/shop/top1-1-700x893.jpg">
+                                            <figure> <img alt="Top Fancy" src="{{ asset('public') }}/assets/images/shop/top1-1-700x893.jpg">
                                                 <figcaption>
-                                                    <h4><a href="assets/images/shop/top1-1-700x893.jpg">Zoom In</a></h4> </figcaption>
+                                                    <h4><a href="{{ asset('public') }}/assets/images/shop/top1-1-700x893.jpg">Zoom In</a></h4> </figcaption>
                                             </figure>
                                         </li>
-                                        <li data-thumb="assets/images/shop/top1-2-90x114.jpg">
-                                            <figure> <img alt="Top Fancy" src="assets/images/shop/top1-2-700x893.jpg">
-                                                <figcaption>
-                                                    <h4><a href="assets/images/shop/top1-2-700x893.jpg">Zoom In</a></h4> </figcaption>
+                                        <li>
+                                            <figure> <img src="" alt="Top Fancy">
+                
                                             </figure>
                                         </li>
                                     </ul>

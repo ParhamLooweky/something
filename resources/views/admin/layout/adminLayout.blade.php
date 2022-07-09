@@ -74,15 +74,20 @@
         <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
-                <li class="sub-menu active">
+                <li class="sub-menu @if (Route::currentRouteName()== 'adminvisit')
+                active
+                @elseif (Route::currentRouteName()=='adduser')
+                active
+                    
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>کاربرها</span>
+                        <span>Users</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست کاربران</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن کاربر</a></li>
+                        <li><a href="{{ route('adminvisit') }}" style="color: #f2f2f2"> Users List</a></li>
+                        <li><a href="{{ route('adduser') }}" style="color: #f2f2f2">Add User</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
