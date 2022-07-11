@@ -46,7 +46,7 @@
             <ul class="nav pull-left top-menu">
 
                 <li id="header_notification_bar" class="dropdown">
-                    <a href="">خانه</a>
+                    <a href="{{route('adminlayout')}}">Home</a>
 
                 </li>
 
@@ -54,7 +54,7 @@
 
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="username">
-                              حسین پورقدیری
+                              Mahdi Ghiasy
                             <b class="caret"></b>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
@@ -78,7 +78,7 @@
                 active
                 @elseif (Route::currentRouteName()=='adduser')
                 active
-                    
+
                 @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
@@ -93,38 +93,38 @@
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-ban-circle"></i>
-                        <span>سطوح دسترسی</span>
+                        <span>Levels of Access</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li> <a href="" style="color: #f2f2f2">مدیریت سطوح دسترسی</a></li>
-                        <li> <a href="" style="color: #f2f2f2">افزودن سطح دسترسی</a></li>
-                        <li> <a href="" style="color: #f2f2f2">مدیریت نقش</a></li>
-                        <li> <a href="" style="color: #f2f2f2">افزودن نقش</a></li>
+                        <li> <a href="{{route('permvisit')}}" style="color: #f2f2f2">Manage levels of access</a></li>
+                        <li> <a href="{{route('permadd')}}" style="color: #f2f2f2">Add levels of access</a></li>
+                        <li> <a href="{{route('visitrole')}}" style="color: #f2f2f2">Manage roles</a></li>
+                        <li> <a href="{{route('addrole')}}" style="color: #f2f2f2">Add roles</a></li>
                     </ul>
                 </li>
 
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>دسته بندی ها</span>
+                        <span>Categories</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست دسته ها</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن دسته</a></li>
+                        <li><a href="{{route('visitcat')}}" style="color: #f2f2f2">لیست دسته ها</a></li>
+                        <li><a href="{{route('addcat')}}" style="color: #f2f2f2">افزودن دسته</a></li>
                     </ul>
                 </li>
 
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-archive"></i>
-                        <span>تگ ها</span>
+                        <span>Tags</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست تگ ها</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن تگ</a></li>
+                        <li><a href="{{route('visittag')}}" style="color: #f2f2f2">لیست تگ ها</a></li>
+                        <li><a href="{{route('addtag')}}" style="color: #f2f2f2">افزودن تگ</a></li>
                     </ul>
                 </li>
 
@@ -133,7 +133,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>مدیریت تخفیف</span>
+                        <span>Discounts</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
@@ -157,7 +157,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>نظر ها</span>
+                        <span>Comments</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">

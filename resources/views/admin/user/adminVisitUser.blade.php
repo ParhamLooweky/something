@@ -45,7 +45,7 @@
         <section class="wrapper">
             <section class="panel">
                 <header class="panel-heading">
-                    مدیریت کاربران
+                    Manage users
 
 
                 </header>
@@ -57,35 +57,35 @@
                         <table id="orderTable" class="table table-striped">
                             <thead>
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">نام و نام خانوادگی</th>
-                                <th style="text-align: right">تلفن</th>
-                                <th style="text-align: right">پست اکترونیک</th>
-                                <th style="text-align: right">نقش</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">First and last name</th>
+                                <th style="text-align: right">Phone</th>
+                                <th style="text-align: right">Gmail</th>
+                                <th style="text-align: right">Role</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Possibilities</th>
                             </tr>
                             </thead>
                             <tfoot style="direction: rtl;">
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">نام و نام خانوادگی</th>
-                                <th style="text-align: right">تلفن</th>
-                                <th style="text-align: right">پست اکترونیک</th>
-                                <th style="text-align: right">نقش</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">First and last name</th>
+                                <th style="text-align: right">Phone</th>
+                                <th style="text-align: right">Gmail</th>
+                                <th style="text-align: right">Role</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Possibilities</th>
                             </tr>
                             </tfoot>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>حسین پورقدیری</td>
+                                    <td>Mahdi Ghiasy</td>
                                     <td>09398932183</td>
-                                    <td>hossein.654321@yahoo.com</td>
-                                    <td><p class="label label-default" style="background-color: gold"></p></td>
-                                    <td><p class="label label-danger" style="width: 250px">غیر فعال</p></td>
-                                    <td><a class="label label-warning" href="">ویرایش</a>
+                                    <td>##############</td>
+                                    <td><p class="label label-default" style="background-color: gold">Admin</p></td>
+                                    <td><p class="label label-danger" style="width: 250px">Disabled</p></td>
+                                    <td><a class="label label-warning" href="">Edit</a>
                                     </td>
                                 </tr>
                             </tbody>

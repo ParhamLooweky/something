@@ -18,22 +18,22 @@
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
                                     <legend></legend>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">نام و نام خانوادگی</label>
+                                        <label class="col-lg-2 control-label">First and last name</label>
                                         <div class="col-lg-10">
                                             <input type="text" required="required"
-                                                   oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
+                                                   oninvalid="this.setCustomValidity('Cant be empty')"
                                                    onchange="this.setCustomValidity('')" name="name"
                                                    class="form-control"
-                                                   placeholder="نام و نام خانوادگی خود را وارد کنید">
+                                                   placeholder="Enter Your First and last name">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">شماره تماس</label>
+                                        <label class="col-lg-2 control-label">Phone Number</label>
                                         <div class="col-lg-10">
                                             <input type="text" required="required"
                                                    oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
                                                    onchange="this.setCustomValidity('')" name="phone"
-                                                   class="form-control" placeholder="شماره تماس خود را وارد کنید">
+                                                   class="form-control" placeholder="Enter Your Phone Number">
                                             <div class="help-block with-errors"></div>
 
                                         </div>

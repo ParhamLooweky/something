@@ -30,3 +30,11 @@ Route::get('femaleProducts',[\App\Http\Controllers\CategoryController::class, 'f
 Route::get('admin/main',[\App\Http\Controllers\AdminController::class, 'adminMain'])->name('adminlayout');
 Route::get('admin/visitUser',[\App\Http\Controllers\AdminController::class, 'adminVisit'])->name('adminvisit');
 Route::get('admin/addUser',[\App\Http\Controllers\AdminController::class, 'addUser'])->name('adduser');
+Route::get('admin/visitPerms',[\App\Http\Controllers\AdminController::class, 'adminPerm'])->name('permvisit');
+Route::get('admin/addPerm',[\App\Http\Controllers\AdminController::class, 'adminAddPerm'])->name('permadd');
+Route::get('admin/visitRoles',[\App\Http\Controllers\AdminController::class, 'adminRoles'])->name('visitrole');
+Route::get('admin/addRoles',[\App\Http\Controllers\AdminController::class, 'adminAddRoles'])->name('addrole');
+Route::get('admin/visitCategory',[\App\Http\Controllers\AdminController::class, 'adminCategory'])->name('visitcat');
+Route::get('admin/addCategory',[\App\Http\Controllers\AdminController::class, 'adminAddCategory'])->name('addcat');
+Route::get('admin/visitTag',[\App\Http\Controllers\AdminController::class, 'adminVisitTag'])->name('visittag');
+Route::get('admin/addTag',[\App\Http\Controllers\AdminController::class, 'adminAddTag'])->name('addtag');
