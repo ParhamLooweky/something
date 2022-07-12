@@ -36,10 +36,10 @@
     <!--header start-->
     <header class="header white-bg">
         <div class="sidebar-toggle-box">
-            <div data-original-title="برای باز و بسته شدن منو کلیک کنید" data-placement="left" class="icon-reorder tooltips"></div>
+            <div data-original-title="Click to toggle close Menu" data-placement="left" class="icon-reorder tooltips"></div>
         </div>
         <!--logo start-->
-        <a href="" class="logo">  مدیریت <span> SHOP</span></a>
+        <a href="" class="logo"> <span> SHOP</span>  Management </a>
         <!--logo end-->
 
         <div class="top-nav ">
@@ -47,7 +47,6 @@
 
                 <li id="header_notification_bar" class="dropdown">
                     <a href="{{route('adminlayout')}}">Home</a>
-
                 </li>
 
                 <li class="dropdown">
@@ -74,11 +73,11 @@
         <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
-                <li class="sub-menu @if (Route::currentRouteName()== 'adminvisit')
+                <li class="sub-menu
+                @if (Route::currentRouteName()== 'adminvisit')
                 active
                 @elseif (Route::currentRouteName()=='adduser')
                 active
-
                 @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
@@ -90,7 +89,16 @@
                         <li><a href="{{ route('adduser') }}" style="color: #f2f2f2">Add User</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
+                <li class="sub-menu
+                    @if (Route::currentRouteName() == 'permvisit')
+                    active
+                    @elseif (Route::currentRouteName() == 'permadd')
+                    active
+                    @elseif (Route::currentRouteName() == 'visitrole')
+                    active
+                    @elseif (Route::currentRouteName() == 'addrole')
+                    active
+                    @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-ban-circle"></i>
                         <span>Levels of Access</span>
@@ -104,7 +112,13 @@
                     </ul>
                 </li>
 
-                <li class="sub-menu">
+
+                <li class="sub-menu
+                @if (Route::currentRouteName() == 'visitcat')
+                    active
+                @elseif (Route::currentRouteName() == 'addcat')
+                    active
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
                         <span>Categories</span>
@@ -116,7 +130,13 @@
                     </ul>
                 </li>
 
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if (Route::currentRouteName() == 'visittag')
+                    active
+                @elseif (Route::currentRouteName() == 'addtag')
+                    active
+                @endif
+                ">
                     <a href="javascript:;" class="">
                         <i class="icon-archive"></i>
                         <span>Tags</span>
@@ -130,91 +150,129 @@
 
 
 
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if (Route::currentRouteName() == 'visitdiscount')
+                    active
+                @elseif (Route::currentRouteName() == 'adddiscount')
+                    active
+                @endif
+                ">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
                         <span>Discounts</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست تخفیف ها</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن تخفیف</a></li>
+                        <li><a href="{{route('visitdiscount')}}" style="color: #f2f2f2">لیست تخفیف ها</a></li>
+                        <li><a href="{{route('adddiscount')}}" style="color: #f2f2f2">افزودن تخفیف</a></li>
                     </ul>
                 </li>
 
-                <li class="sub-menu">
+                <li class="sub-menu"
+                    @if (Route::currentRouteName() == 'addproduct')
+                        active
+{{--                    @elseif (Route::currentRouteName() == 'addcat')--}}
+{{--                        active--}}
+                    @endif>
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>محصولات</span>
+                        <span>Products</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست محصولات</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن محصولات</a></li>
+{{--                        <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">لیست محصولات</a></li>--}}
+                        <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">افزودن محصولات</a></li>
                     </ul>
                 </li>
 
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if (Route::currentRouteName() == 'admincomment')
+                    active
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
                         <span>Comments</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست نظر ها</a></li>
+                        <li><a href="{{route('admincomment')}}" style="color: #f2f2f2">لیست نظر ها</a></li>
                     </ul>
                 </li>
 
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if (Route::currentRouteName() == 'adminprovince')
+                    active
+                @elseif (Route::currentRouteName() == 'addprovince')
+                    active
+                @elseif (Route::currentRouteName() == 'admincity')
+                    active
+                @elseif (Route::currentRouteName() == 'addcity')
+                    active
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>مدیریت شهر و استان</span>
+                        <span>Manage</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست استان ها</a></li>
-                        <li><a href="" style="color: #f2f2f2">افزودن استان</a></li>
-                        <li><a href="" style="color: #f2f2f2">لیست شهر</a></li>
+                        <li><a href="{{route('adminprovince')}}" style="color: #f2f2f2">لیست استان ها</a></li>
+                        <li><a href="{{route('addprovince')}}" style="color: #f2f2f2">افزودن استان</a></li>
+                        <li><a href="{{route('admincity')}}" style="color: #f2f2f2">لیست شهر</a></li>
+                        <li><a href="{{route('addcity')}}" style="color: #f2f2f2">Add city</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if(Route::currentRouteName() == 'adminaddress')
+                    active
+                @endif">
+
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>آدرس ها</span>
+                        <span>Addresses</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست آدرس ها</a></li>
+                        <li><a href="{{route('adminaddress')}}" style="color: #f2f2f2">لیست آدرس ها</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if(Route::currentRouteName() == 'adminfactor')
+                    active
+                @endif
+                ">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>فاکتور ها</span>
+                        <span>Factors</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست فاکتور ها</a></li>
+                        <li><a href="{{route('adminfactor')}}" style="color: #f2f2f2">لیست فاکتور ها</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if(Route::currentRouteName() == 'admintransfer')
+                    active
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>تراکنش ها</span>
+                        <span>Transaction</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست تراکنش ها</a></li>
+                        <li><a href="{{route('admintransfer')}}" style="color: #f2f2f2">لیست تراکنش ها</a></li>
                     </ul>
                 </li>
-                <li class="sub-menu">
+                <li class="sub-menu
+                @if(Route::currentRouteName() == 'admincontact')
+                    active
+                @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>تماس با ما</span>
+                        <span>Contact Us</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="" style="color: #f2f2f2">لیست تماس ها</a></li>
+                        <li><a href="{{route('admincontact')}}" style="color: #f2f2f2">لیست تماس ها</a></li>
                     </ul>
                 </li>
 

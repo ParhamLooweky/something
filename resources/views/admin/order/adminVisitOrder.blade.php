@@ -140,8 +140,7 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
-                            @endif
+
                             </tbody>
 
                         </table>

@@ -45,4 +45,54 @@ class AdminController extends Controller
     public function adminAddTag(){
         return view('admin.tag.adminAddTag');
     }
+
+    public function adminDiscount(){
+        return view('admin.discount.adminVisitDiscount');
+    }
+
+    public function adminAddDiscount(){
+        return view('admin.discount.adminAddDiscount');
+    }
+
+    public function adminProducts(){
+        return view('admin.product.adminVisitProduct');
+    }
+
+    public function adminAddProducts(){
+        return view('admin.product.adminAddProduct');
+    }
+    public function adminComment(){
+        return view('admin.comment.adminVisitComment');
+    }
+
+    public function adminVisitProvince(){
+        return view('admin.RCZ.adminVisitRegion');
+    }
+
+    public function adminAddProvince(){
+        return view('admin.RCZ.adminAddRegion');
+    }
+
+    public function adminVisitCity(){
+        return view('admin.RCZ.adminVisitCity');
+    }
+
+    public function adminAddCity(){
+        return view('admin.RCZ.adminAddCity');
+    }
+
+    public function adminAddress(){
+        return view('admin.address.adminVisitAddress');
+    }
+
+    public function adminFactors(){
+        return view('admin.order.adminVisitOrder');
+    }
+    public function adminTransfer(){
+        return view('admin.transaction.adminVisitTransaction');
+    }
+
+    public function adminContact(){
+        return view('admin.contact.adminVisitContact');
+    }
 }

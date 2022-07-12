@@ -136,7 +136,6 @@
                                            href="{{route('adminUpdateProduct',$product->id)}}">ویرایش</a>
                                     </td>
                                 </tr>
-                            @endforeach
                             </tbody>
 
                         </table>

@@ -38,3 +38,16 @@ Route::get('admin/visitCategory',[\App\Http\Controllers\AdminController::class, 
 Route::get('admin/addCategory',[\App\Http\Controllers\AdminController::class, 'adminAddCategory'])->name('addcat');
 Route::get('admin/visitTag',[\App\Http\Controllers\AdminController::class, 'adminVisitTag'])->name('visittag');
 Route::get('admin/addTag',[\App\Http\Controllers\AdminController::class, 'adminAddTag'])->name('addtag');
+Route::get('admin/visitDiscount',[\App\Http\Controllers\AdminController::class, 'adminDiscount'])->name('visitdiscount');
+Route::get('admin/addDiscount',[\App\Http\Controllers\AdminController::class, 'adminAddDiscount'])->name('adddiscount');
+Route::get('admin/visitProduct',[\App\Http\Controllers\AdminController::class, 'adminProducts'])->name('visitproduct');
+Route::get('admin/addProduct',[\App\Http\Controllers\AdminController::class, 'adminAddProducts'])->name('addproduct');
+Route::get('admin/Comments',[\App\Http\Controllers\AdminController::class, 'adminComment'])->name('admincomment');
+Route::get('admin/visitProvince',[\App\Http\Controllers\AdminController::class, 'adminVisitProvince'])->name('adminprovince');
+Route::get('admin/addProvince',[\App\Http\Controllers\AdminController::class, 'adminAddCity'])->name('addprovince');
+Route::get('admin/visitCity',[\App\Http\Controllers\AdminController::class, 'adminVisitCity'])->name('admincity');
+Route::get('admin/addCity',[\App\Http\Controllers\AdminController::class, 'adminAddCity'])->name('addcity');
+Route::get('admin/Address',[\App\Http\Controllers\AdminController::class, 'adminAddress'])->name('adminaddress');
+Route::get('admin/Factors',[\App\Http\Controllers\AdminController::class, 'adminFactors'])->name('adminfactor');
+Route::get('admin/Transfers',[\App\Http\Controllers\AdminController::class, 'adminTransfer'])->name('admintransfer');
+Route::get('admin/Contact',[\App\Http\Controllers\AdminController::class, 'adminContact'])->name('admincontact');
