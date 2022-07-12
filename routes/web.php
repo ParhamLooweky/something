@@ -28,29 +28,34 @@ Route::get('maleProducts',[\App\Http\Controllers\CategoryController::class, 'mal
 Route::get('femaleProducts',[\App\Http\Controllers\CategoryController::class, 'femaleproducts'])->name('femalep');
                                 // Admin Routes \\
 Route::controller(\App\Http\Controllers\AdminController::class)->group(function () {
-    Route::get('admin/main', 'adminMain')->name('adminlayout');
-    Route::get('admin/visitUser', 'adminVisit')->name('adminvisit');
-    Route::get('admin/addUser', 'addUser')->name('adduser');
-    Route::get('admin/visitPerms', 'adminPerm')->name('permvisit');
-    Route::get('admin/addPerm', 'adminAddPerm')->name('permadd');
-    Route::get('admin/visitRoles', 'adminRoles')->name('visitrole');
-    Route::get('admin/addRoles', 'adminAddRoles')->name('addrole');
-    Route::get('admin/visitCategory', 'adminCategory')->name('visitcat');
-    Route::get('admin/addCategory', 'adminAddCategory')->name('addcat');
-    Route::get('admin/visitTag', 'adminVisitTag')->name('visittag');
-    Route::get('admin/addTag', 'adminAddTag')->name('addtag');
-    Route::get('admin/visitDiscount', 'adminDiscount')->name('visitdiscount');
-    Route::get('admin/addDiscount', 'adminAddDiscount')->name('adddiscount');
-    Route::get('admin/visitProduct', 'adminProducts')->name('visitproduct');
-    Route::get('admin/addProduct', 'adminAddProducts')->name('addproduct');
-    Route::get('admin/Comments', 'adminComment')->name('admincomment');
-    Route::get('admin/visitProvince', 'adminVisitProvince')->name('adminprovince');
-    Route::get('admin/addProvince', 'adminAddCity')->name('addprovince');
-    Route::get('admin/visitCity', 'adminVisitCity')->name('admincity');
-    Route::get('admin/addCity', 'adminAddCity')->name('addcity');
-    Route::get('admin/Address', 'adminAddress')->name('adminaddress');
-    Route::get('admin/Factors', 'adminFactors')->name('adminfactor');
-    Route::get('admin/Transfers', 'adminTransfer')->name('admintransfer');
-    Route::get('admin/Contact', 'adminContact')->name('admincontact');
-});
+    Route::prefix('admin')->group(function () {
+        Route::get('/main', 'adminMain')->name('adminlayout');
+        Route::get('/visitUser', 'adminVisit')->name('adminvisit');
+        Route::get('/addUser', 'addUser')->name('adduser');
+        Route::get('/visitPerms', 'adminPerm')->name('permvisit');
+        Route::get('/addPerm', 'adminAddPerm')->name('permadd');
+        Route::get('/visitRoles', 'adminRoles')->name('visitrole');
+        Route::get('/addRoles', 'adminAddRoles')->name('addrole');
+        Route::get('/visitCategory', 'adminCategory')->name('visitcat');
+        Route::get('/addCategory', 'adminAddCategory')->name('addcat');
+        Route::get('/visitTag', 'adminVisitTag')->name('visittag');
+        Route::get('/addTag', 'adminAddTag')->name('addtag');
+        Route::get('/visitDiscount', 'adminDiscount')->name('visitdiscount');
+        Route::get('/addDiscount', 'adminAddDiscount')->name('adddiscount');
+        Route::get('/visitProduct', 'adminProducts')->name('visitproduct');
+        Route::get('/addProduct', 'adminAddProducts')->name('addproduct');
+        Route::get('/Comments', 'adminComment')->name('admincomment');
+        Route::get('/visitProvince', 'adminVisitProvince')->name('adminprovince');
+        Route::get('/addProvince', 'adminAddCity')->name('addprovince');
+        Route::get('/visitCity', 'adminVisitCity')->name('admincity');
+        Route::get('/addCity', 'adminAddCity')->name('addcity');
+        Route::get('/Address', 'adminAddress')->name('adminaddress');
+        Route::get('/Factors', 'adminFactors')->name('adminfactor');
+        Route::get('/Transfers', 'adminTransfer')->name('admintransfer');
+        Route::get('/Contact', 'adminContact')->name('admincontact');
+
+        });
+    });
+
+
                                 // Admin Routes End \\
