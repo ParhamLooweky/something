@@ -77,7 +77,7 @@
                                     <td>رشت</td>
                                     <td><p class="label label-warning">غیر فعال</p></td>
                                     <td>
-                                        <a class="label label-warning" href="">ویرایش</a>
+                                        <a class="label label-warning" href="{{route('updatecity',[1])}}">ویرایش</a>
                                     </td>
                                 </tr>
                             </tbody>

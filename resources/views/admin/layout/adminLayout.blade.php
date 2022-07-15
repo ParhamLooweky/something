@@ -171,8 +171,8 @@
                 <li class="sub-menu"
                     @if (Route::currentRouteName() == 'addproduct')
                         active
-{{--                    @elseif (Route::currentRouteName() == 'addcat')--}}
-{{--                        active--}}
+                    @elseif (Route::currentRouteName() == 'visitproduct')
+                       active
                     @endif>
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
@@ -180,7 +180,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-{{--                        <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">لیست محصولات</a></li>--}}
+                       <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">لیست محصولات</a></li>
                         <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">افزودن محصولات</a></li>
                     </ul>
                 </li>

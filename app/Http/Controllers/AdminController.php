@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Event\ViewEvent;
 
 class AdminController extends Controller
 {
@@ -95,4 +96,41 @@ class AdminController extends Controller
     public function adminContact(){
         return view('admin.contact.adminVisitContact');
     }
+    // update controllers \\
+    public function updateUser(){
+        return view('admin.user.adminUpdateUser');
+    }
+
+    public function updatePermission(){
+        return view('admin.permission.adminUpdatePermission');
+    }
+
+    public function updateCategory(){
+        return view('admin.category.adminUpdateCategory');
+    }
+
+    public function updateTag(){
+        return view('admin.tag.adminUpdateTag');
+    }
+
+    public function updateDiscount(){
+        return view('admin.discount.adminUpdateDiscount');
+    }
+
+    public function updateProduct(){
+        return view('admin.product.adminUpdateProduct');
+    }
+
+    public function updateComment(){
+        return view('admin.comment.adminUpdateComment');
+    }
+
+    public function updateProvince(){
+        return view('admin.RCZ.adminUpdateRegion');
+    }
+
+    public function updateCity(){
+        return view('admin.RCZ.adminUpdateCity');
+    }
+
 }

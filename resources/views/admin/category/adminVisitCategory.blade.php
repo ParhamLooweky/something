@@ -81,7 +81,7 @@
                                 <td><p class="label label-success" style="width: 250px">فعال</p></td>
                                 <td>
                                     <a class="label label-warning"
-                                       href="">ویرایش</a>
+                                       href="{{ route('updatecat',[1]) }}">ویرایش</a>
                                     <a class="label label-info"
                                        href="">افزودن +</a>
                                 </td>

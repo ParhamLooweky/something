@@ -77,7 +77,7 @@
                                     <td>پیشفرض</td>
                                     <td><p class="label label-warning" style="width: 250px">غیر فعال</p></td>
                                     <td>
-                                        <a class="label label-warning" href="">ویرایش</a>
+                                        <a class="label label-warning" href="{{ route('updatetag',[1]) }}">ویرایش</a>
                                     </td>
                                 </tr>
                             </tbody>

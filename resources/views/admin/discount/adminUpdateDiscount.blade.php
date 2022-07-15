@@ -30,7 +30,7 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">مبلغ تخفیف</label>
                                         <div class="col-lg-10">
-                                            <input value="{{ $discount->price }}" type="text" name="price" class="form-control"
+                                            <input  type="text" name="price" class="form-control"
                                                    placeholder="عنوان تخفیف">
                                         </div>
                                     </div>

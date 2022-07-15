@@ -87,7 +87,7 @@
                                     <td><p class="label label-success" style="width: 250px">فعال</p></td>
                                     <td>
                                         <a class="label label-warning"
-                                           href="">ویرایش</a>
+                                           href="{{ route('updatediscount',[1]) }}">ویرایش</a>
                                     </td>
                                 </tr>
                             </tbody>

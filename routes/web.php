@@ -4,17 +4,6 @@ use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 use Monolog\Processor\HostnameProcessor;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('',[IndexController::class, 'index'])->name('Index');
 Route::get('contact',[IndexController::class, 'contact'])->name('contacts');
 Route::get('faq',[\App\Http\Controllers\FaqController::class, 'FAQ'])->name('faq');
@@ -53,6 +42,18 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::get('/Factors', 'adminFactors')->name('adminfactor');
         Route::get('/Transfers', 'adminTransfer')->name('admintransfer');
         Route::get('/Contact', 'adminContact')->name('admincontact');
+        //update routes\\
+        Route::get('/updateUser/{id}', 'updateUser')->name('updateuser');
+        Route::get('/updatePermission/{id}', 'updatePermission')->name('updateperm');
+        Route::get('/updateCategory/{id}', 'updateCategory')->name('updatecat');
+        Route::get('/updateTag/{id}', 'updateTag')->name('updatetag');
+        Route::get('/updateDiscount/{id}', 'updateDiscount')->name('updatediscount');
+        Route::get('/updateProduct/{id}', 'updateProduct')->name('updateproduct');
+        Route::get('/updateComment/{id}', 'updateComment')->name('updatecomment');
+        Route::get('/updateProvince/{id}', 'updateCity')->name('updateprovince');
+        Route::get('/updateCity/{id}', 'updateCity')->name('updatecity');
+
+
 
         });
     });

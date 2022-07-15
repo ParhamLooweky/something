@@ -124,16 +124,16 @@
                                             </div>
                                     </td>
                                     <td>
-                                        @if($product->status == 0)
+                                        {{-- @if($product->status == 0)
                                             <p class="label label-warning" style="width: 250px">غیر فعال</p>
                                         @endif
                                         @if($product->status == 1)
                                             <p class="label label-success" style="width: 250px">فعال</p>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                     <td>
                                         <a class="label label-warning"
-                                           href="{{route('adminUpdateProduct',$product->id)}}">ویرایش</a>
+                                           href="{{route('updateproduct',[1])}}">ویرایش</a>
                                     </td>
                                 </tr>
                             </tbody>

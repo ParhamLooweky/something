@@ -85,7 +85,7 @@
                                     <td>##############</td>
                                     <td><p class="label label-default" style="background-color: gold">Admin</p></td>
                                     <td><p class="label label-danger" style="width: 250px">Disabled</p></td>
-                                    <td><a class="label label-warning" href="">Edit</a>
+                                    <td><a class="label label-warning" href="{{ route('updateuser',[1]) }}">Edit</a>
                                     </td>
                                 </tr>
                             </tbody>

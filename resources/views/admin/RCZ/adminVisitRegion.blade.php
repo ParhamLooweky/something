@@ -77,7 +77,7 @@
                                     <td>گیلان</td>
                                     <td><p class="label label-warning">غیر فعال</p></td>
                                     <td>
-                                        <a class="label label-warning" href="">ویرایش</a>
+                                        <a class="label label-warning" href="{{route('updateprovince',[1])}}">ویرایش</a>
                                         <a class="label label-info" href="">افزودن شهر +</a>
                                     </td>
                                 </tr>

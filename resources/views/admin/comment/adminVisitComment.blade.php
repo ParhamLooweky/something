@@ -80,7 +80,7 @@
                                     <td>لباس مردانه</td>
                                     <td>لباس مرغوب! همینه که هست؛ میخوای بخا نمیخوای نخا</td>
                                     <td><p class="label label-success">فعال</p></td>
-                                    <td><a class="label label-warning" href="">ویرایش</a></td>
+                                    <td><a class="label label-warning" href="{{ route('updatecomment',[1]) }}">ویرایش</a></td>
                                 </tr>
                             </tbody>
                         </table>
