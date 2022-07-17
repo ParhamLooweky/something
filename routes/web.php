@@ -52,6 +52,10 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::get('/updateComment/{id}', 'updateComment')->name('updatecomment');
         Route::get('/updateProvince/{id}', 'updateCity')->name('updateprovince');
         Route::get('/updateCity/{id}', 'updateCity')->name('updatecity');
+        //delete routes\\
+        Route::get('/deletedUser','deleteAccess')->name('deletepermission');
+        Route::get('/deletedRole','deleteRole')->name('deleterole');
+        Route::get('/deletedAddress','deleteAddress')->name('deleteaddress');
 
 
 

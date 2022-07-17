@@ -96,7 +96,7 @@
                                                     <button data-dismiss="modal" class="btn btn-warning" type="button">
                                                         خیر
                                                     </button>
-                                                    <a href="" class="btn btn-danger" type="button">آری</a>
+                                                    <a href="{{ route('deleterole') }}" class="btn btn-danger" type="button">آری</a>
                                                 </div>
                                             </div>
                                         </div>

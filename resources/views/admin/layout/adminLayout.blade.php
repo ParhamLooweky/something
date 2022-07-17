@@ -39,7 +39,7 @@
             <div data-original-title="Click to toggle close Menu" data-placement="left" class="icon-reorder tooltips"></div>
         </div>
         <!--logo start-->
-        <a href="" class="logo"> <span> SHOP</span>  Management </a>
+        <a href="{{ route('Index') }}" class="logo"> <span> SHOP</span>  Management </a>
         <!--logo end-->
 
         <div class="top-nav ">

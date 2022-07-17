@@ -96,7 +96,7 @@ class AdminController extends Controller
     public function adminContact(){
         return view('admin.contact.adminVisitContact');
     }
-    // update controllers \\
+    // update functions \\
     public function updateUser(){
         return view('admin.user.adminUpdateUser');
     }
@@ -132,5 +132,18 @@ class AdminController extends Controller
     public function updateCity(){
         return view('admin.RCZ.adminUpdateCity');
     }
+    //delete functions
+    
+    public function deleteAccess(){
+        return view('admin.permission.adminVisitPermission');
+        
+    }
 
+    public function deleteRole(){
+        return view('admin.role.adminVisitRole');
+    }
+    
+    public function deleteAddress(){
+        return view('admin.address.adminVisitAddress');
+    }
 }
