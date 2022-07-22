@@ -15,6 +15,8 @@ Route::get('register',[\App\Http\Controllers\RegController::class, 'Register'])-
 Route::get('login',[\App\Http\Controllers\RegController::class, 'Login'])->name('login');
 Route::get('maleProducts',[\App\Http\Controllers\CategoryController::class, 'maleproducts'])->name('malep');
 Route::get('femaleProducts',[\App\Http\Controllers\CategoryController::class, 'femaleproducts'])->name('femalep');
+Route::get('test',[\App\Http\Controllers\IndexController::class, 'Test']);
+
                                 // Admin Routes \\
 Route::controller(\App\Http\Controllers\AdminController::class)->group(function () {
     Route::prefix('admin')->group(function () {
