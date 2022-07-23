@@ -15,16 +15,26 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('discount_id')->nullable();
+            $table->unsignedBigInteger('tag_id')->nullable();
+            $table->unsignedBigInteger('category_id');
             $table->string('label');
-            $table->decimal('price');
-            $table->integer('category_id');
-            $table->integer('tag_id');
-            $table->integer('discount_id');
+            $table->decimal('price',20,2);
             $table->integer('count');
             $table->string('description');
-            $table->integer('status');
+            $table->unsignedTinyInteger('status')->default(1);
             $table->timestamps();
+            
+
+            $table->foreign('tag_id')->references('id')->on('tags')->nullOnDelete()->cascadeOnUpdate();
+            
+            $table->foreign('discount_id')->on('discounts')->references('id')->nullOnDelete()->cascadeOnUpdate();
+            
+            $table->foreign('category_id')->on('categories')->references('id')->cascadeOnUpdate()->cascadeOnDelete();
+        
+        
         });
+
     }
 
     /**
