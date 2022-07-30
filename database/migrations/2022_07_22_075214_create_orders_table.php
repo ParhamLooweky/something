@@ -22,6 +22,25 @@ return new class extends Migration
             $table->decimal('total_price');
             $table->decimal('pay_price');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+            $table->foreign('address_id')
+                ->references('id')
+                ->on('addresses')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+            $table->foreign('discount_id')
+                ->references('id')
+                ->on('discounts')
+                ->nullOnDelete()
+                ->cascadeOnUpdate();
+
         });
     }
 

@@ -19,6 +19,12 @@ return new class extends Migration
             $table->integer('status');
             $table->integer('region_id');
             $table->timestamps();
+
+            $table->foreign('region_id')
+                ->references('id')
+                ->on('regions')
+                ->onDelete('cascade')
+                ->cascadeOnUpdate();
         });
     }
 

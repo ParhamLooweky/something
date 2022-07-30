@@ -20,6 +20,19 @@ return new class extends Migration
             $table->integer('status');
             $table->integer('discount_id');
             $table->timestamps();
+
+            $table->foreign('parent_id')
+            ->references('id')
+            ->on('categories')
+            ->nullOnDelete()
+            ->cascadeOnUpdate();
+
+            $table->foreign('discount_id')
+            ->references('id')
+            ->on('discounts')
+            ->nullOnDelete()
+            ->cascadeOnUpdate();
+
         });
     }
 

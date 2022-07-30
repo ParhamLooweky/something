@@ -261,7 +261,7 @@
                                     <img alt="skirt4-1" height="893" src="assets/images/shop/skirt4-1-700x893.jpg" width="700">
                                 </div>
 
-                                <div class="product-image-back"><img alt="skirt4-1" src="{{ asset('public') }}/assets/images/shop/skirt4-2-700x893.jpg"></div>
+                                <div class="product-image-back"><img alt="skirt4-1" src="{{ asset('public') }}/assets/images/shop/widee.jpeg"></div>
 
                                 <div class="product-image-overlay">
                                     <h4>View Details</h4>
@@ -270,7 +270,7 @@
                         </a>
                                 <div class="product-info">
                                     <h3 class="product-title">
-                                <a href="{{route('simple')}}">Ra Ra Skirt</a>
+                                <a href="{{route('simple')}}">Putin</a>
                             </h3> <span class="product-categories">
                                 <a href="shop-mens-category.html" rel="tag">Skirts</a>,
                                 <a href="shop-mens-category.html" rel="tag">Tops</a>,

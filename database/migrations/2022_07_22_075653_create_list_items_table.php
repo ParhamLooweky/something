@@ -21,6 +21,24 @@ return new class extends Migration
             $table->decimal('pay_price');
             $table->integer('count');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade')
+                ->cascadeOnUpdate();
+
+            $table->foreign('product_id')
+                ->references('id')
+                ->on('products')
+                ->onDelete('cascade')
+                ->cascadeOnUpdate();
+
+            $table->foreign('order_id')
+                ->references('id')
+                ->on('orders')
+                ->onDelete('cascade')
+                ->cascadeOnUpdate();
         });
     }
 
