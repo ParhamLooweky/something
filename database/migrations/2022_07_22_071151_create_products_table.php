@@ -25,8 +25,6 @@ return new class extends Migration
             $table->unsignedTinyInteger('status')->default(1);
             $table->timestamps();
             
-
-            $table->foreign('tag_id')->references('id')->on('tags')->nullOnDelete()->cascadeOnUpdate();
             
             $table->foreign('discount_id')->on('discounts')->references('id')->nullOnDelete()->cascadeOnUpdate();
             

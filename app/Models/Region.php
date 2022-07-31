@@ -9,10 +9,6 @@ class Region extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'label',
-        'status'
-    ];
 
     public function cities()
     {

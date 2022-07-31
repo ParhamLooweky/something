@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label');
             $table->integer('status');
-            $table->integer('region_id');
+            $table->unsignedBigInteger('region_id')->nullable();
             $table->timestamps();
 
             $table->foreign('region_id')

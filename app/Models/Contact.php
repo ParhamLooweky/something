@@ -14,7 +14,6 @@ class Contact extends Model
         'name',
         'phone',
         'description',
-        'status'
     ];
 
     public function user()

@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id');
-            $table->integer('user_id');
-            $table->integer('discount_id');
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('discount_id')->nullable();
+            $table->unsignedBigInteger('address_id')->nullable();
             $table->integer('status');
             $table->decimal('total_price');
             $table->decimal('pay_price');
@@ -26,6 +27,12 @@ return new class extends Migration
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
+
+                $table->foreign('product_id')
+                ->references('id')
+                ->on('products')
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
 

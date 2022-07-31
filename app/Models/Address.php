@@ -10,16 +10,11 @@ class Address extends Model
     use HasFactory;
 
     protected $fillable = [
-        'zone_id',
         'user_id',
         'detail',
         'status'
     ];
 
-    public function zone()
-    {
-        return $this->belongsTo(Zone::class);
-    }
 
     public function user()
     {

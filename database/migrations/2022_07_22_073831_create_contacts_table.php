@@ -19,9 +19,12 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('description');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->integer('status');
             $table->timestamps();
+
+
+            $table->foreign('user_id')->on('users')->references('id')->nullOnDelete()->cascadeOnUpdate();
         });
     }
 
