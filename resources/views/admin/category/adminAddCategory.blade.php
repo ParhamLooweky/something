@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
-                        <header class="panel-heading">افزودن دسته بندی
+                        <header class="panel-heading">add category
 
                         </header>
                         <div class="panel-body">
@@ -31,8 +31,8 @@
                                         <label class="col-lg-2 control-label">وضعیت دسته</label>
                                         <div class="col-lg-10">
                                             <select name="status" class="form-control" style="height: 40px">
-                                                <option value="0" selected>غیر فعال</option>
-                                                <option value="1">فعال</option>
+                                                <option value="0" selected>Deactivated </option>
+                                                <option value="1">Activated</option>
                                             </select>
                                         </div>
                                     </div>
