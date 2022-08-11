@@ -11,5 +11,7 @@ class Tool
         return 'Shop';
     }
 
-
+    public static function admintl(){
+        return 'Admin';
+    }
 }

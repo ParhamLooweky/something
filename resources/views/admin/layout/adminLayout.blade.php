@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="" />
     <meta name="description" content="">
-    <meta name="author" content="Hossein Pourghadiri">
-    <title></title>
+    <meta name="author" content="Mahdi Ghiasy ">
+    <link rel = "icon" href = https://www.freeiconspng.com/thumbs/deal-with-it-glasses-png/deal-with-it-glasses-png-clip-art-3.png type = "image/x-icon">
+    <title>{{App\Models\Tool::admintl() }}</title>
     <!-- Bootstrap core CSS -->
     <link rel="shortcut icon" href="">
 
@@ -26,20 +27,20 @@
 
     <script src="{{asset('admin')}}/js/jquery.js"></script>
     <script src="{{asset('admin')}}/js/jquery-1.8.3.min.js"></script>
-    @yield('css')
+<!--     @yield('mycss') -->
 
 </head>
 
-<body>
+<body style="background-color: #212121">
 
 <section id="container" class="">
     <!--header start-->
-    <header class="header white-bg">
+    <header style="background-color: #312f2f" class="header ">
         <div class="sidebar-toggle-box">
             <div data-original-title="Click to toggle close Menu" data-placement="left" class="icon-reorder tooltips"></div>
         </div>
         <!--logo start-->
-        <a href="{{ route('Index') }}" class="logo"> <span> SHOP</span>  Management </a>
+        <a href="{{ route('Index') }}" class="logo"> <span> MANAGEMENT</span> </a>
         <!--logo end-->
 
         <div class="top-nav ">
@@ -57,8 +58,7 @@
                             <b class="caret"></b>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
-                                <p></p>
-                                <li><a href=""><i class="icon-eject"></i> خروج</a></li>
+                                <li><a href=""><i class="icon-eject"></i> Ø®Ø±ÙˆØ¬</a></li>
                             </ul>
                         </span>
                     </a>
@@ -70,7 +70,7 @@
     </header>
 
     <aside>
-        <div id="sidebar" class="nav-collapse ">
+        <div id="sidebar" class="nav-collapse" style="background-color: #4e4a4a">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
                 <li class="sub-menu
@@ -125,8 +125,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visitcat')}}" style="color: #f2f2f2">لیست دسته ها</a></li>
-                        <li><a href="{{route('addcat')}}" style="color: #f2f2f2">افزودن دسته</a></li>
+                        <li><a href="{{route('visitcat')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø¯Ø³ØªÙ‡ Ù‡Ø§</a></li>
+                        <li><a href="{{route('addcat')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ø¯Ø³ØªÙ‡</a></li>
                     </ul>
                 </li>
 
@@ -143,8 +143,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visittag')}}" style="color: #f2f2f2">لیست تگ ها</a></li>
-                        <li><a href="{{route('addtag')}}" style="color: #f2f2f2">افزودن تگ</a></li>
+                        <li><a href="{{route('visittag')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªÚ¯ Ù‡Ø§</a></li>
+                        <li><a href="{{route('addtag')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† ØªÚ¯</a></li>
                     </ul>
                 </li>
 
@@ -163,8 +163,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visitdiscount')}}" style="color: #f2f2f2">لیست تخفیف ها</a></li>
-                        <li><a href="{{route('adddiscount')}}" style="color: #f2f2f2">افزودن تخفیف</a></li>
+                        <li><a href="{{route('visitdiscount')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªØ®Ù�ÛŒÙ� Ù‡Ø§</a></li>
+                        <li><a href="{{route('adddiscount')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† ØªØ®Ù�ÛŒÙ�</a></li>
                     </ul>
                 </li>
 
@@ -180,8 +180,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                       <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">لیست محصولات</a></li>
-                        <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">افزودن محصولات</a></li>
+                       <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù…Ø­ØµÙˆÙ„Ø§Øª</a></li>
+                        <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ù…Ø­ØµÙˆÙ„Ø§Øª</a></li>
                     </ul>
                 </li>
 
@@ -195,7 +195,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('admincomment')}}" style="color: #f2f2f2">لیست نظر ها</a></li>
+                        <li><a href="{{route('admincomment')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù†Ø¸Ø± Ù‡Ø§</a></li>
                     </ul>
                 </li>
 
@@ -215,9 +215,9 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminprovince')}}" style="color: #f2f2f2">لیست استان ها</a></li>
-                        <li><a href="{{route('addprovince')}}" style="color: #f2f2f2">افزودن استان</a></li>
-                        <li><a href="{{route('admincity')}}" style="color: #f2f2f2">لیست شهر</a></li>
+                        <li><a href="{{route('adminprovince')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø§Ø³ØªØ§Ù† Ù‡Ø§</a></li>
+                        <li><a href="{{route('addprovince')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ø§Ø³ØªØ§Ù†</a></li>
+                        <li><a href="{{route('admincity')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø´Ù‡Ø±</a></li>
                         <li><a href="{{route('addcity')}}" style="color: #f2f2f2">Add city</a></li>
                     </ul>
                 </li>
@@ -232,7 +232,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminaddress')}}" style="color: #f2f2f2">لیست آدرس ها</a></li>
+                        <li><a href="{{route('adminaddress')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø¢Ø¯Ø±Ø³ Ù‡Ø§</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu
@@ -246,7 +246,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminfactor')}}" style="color: #f2f2f2">لیست فاکتور ها</a></li>
+                        <li><a href="{{route('adminfactor')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù�Ø§Ú©ØªÙˆØ± Ù‡Ø§</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu
@@ -259,7 +259,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('admintransfer')}}" style="color: #f2f2f2">لیست تراکنش ها</a></li>
+                        <li><a href="{{route('admintransfer')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªØ±Ø§Ú©Ù†Ø´ Ù‡Ø§</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu
@@ -272,7 +272,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('admincontact')}}" style="color: #f2f2f2">لیست تماس ها</a></li>
+                        <li><a href="{{route('admincontact')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªÙ…Ø§Ø³ Ù‡Ø§</a></li>
                     </ul>
                 </li>
 
