@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\UserAction;
+use App\Http\Requests\UserNameRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 
 class AdminController extends Controller
@@ -10,12 +14,23 @@ class AdminController extends Controller
     public function adminMain (){
         return view('admin.layout.adminLayout');
     }
+    
+    
+    
     public function adminVisit(){
-        return view('admin.user.adminVisitUser');
+        
+        $users = User::all();
+        
+        return view('admin.user.adminVisitUser', compact('users'));
     }
 
     public function addUser(){
-        return view('admin.user.adminAddUser');
+        $roles = Role::all();
+        return view('admin.user.adminAddUser', compact('roles'));
+    }
+    public function adminPostUser(UserNameRequest $request){
+        $action = UserAction::addUser($request);
+    
     }
     public function adminPerm(){
         return view('admin.permission.adminVisitPermission');
@@ -146,4 +161,6 @@ class AdminController extends Controller
     public function deleteAddress(){
         return view('admin.address.adminVisitAddress');
     }
+   
+
 }

@@ -78,16 +78,31 @@
                             </tr>
                             </tfoot>
                             <tbody>
+                            @foreach ($users as $user )
+                                
+                            
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mahdi Ghiasy</td>
-                                    <td>09398932183</td>
-                                    <td>##############</td>
-                                    <td><p class="label label-default" style="background-color: gold">Admin</p></td>
-                                    <td><p class="label label-danger" style="width: 250px">Disabled</p></td>
-                                    <td><a class="label label-warning" href="{{ route('updateuser',[1]) }}">Edit</a>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}y</td>
+                                    <td>{{ $user->phone }}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td><p class="label label-default" style="background-color: gold">{{ $user->getRoleNames()[0] }}</p></td>
+                                    <td>
+                                    @if ($user->status == 1)
+                                        
+                                        <p class="label label-success" style="width: 250px">Active</p>
+                                        
+                                        @elseif ($users->status ==0)
+                                        
+                                        <p class="label label-danger" style="width: 250px">Active</p>
+                                    @endif
+                                    </td>
+                                    <td><a class="label label-warning" href="{{ route('updateuser',$user) }}">Edit</a>
                                     </td>
                                 </tr>
+
+                                
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

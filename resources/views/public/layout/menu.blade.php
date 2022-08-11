@@ -47,7 +47,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-item dropdown  "> <a class="dropdown-toggle" data-toggle="dropdown" href="/#">Pages</a>
+                        <li class="menu-item dropdown "> <a class="dropdown-toggle " data-toggle="dropdown" href="/#">Pages</a>
                             <ul class="dropdown-menu dropdown-menu-left ">
                                 <li class="menu-item"> <a href="/shop-mens-category.html">Simple Category</a> </li>
                                 <li class="menu-item"> <a href="/shop-video-category.html">Video Category</a> </li>

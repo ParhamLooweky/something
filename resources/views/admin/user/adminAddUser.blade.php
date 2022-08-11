@@ -7,15 +7,16 @@
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
-                        <header class="panel-heading">افزودن کاربر
+                        <header class="panel-heading">Add User
 
                         </header>
                         <div class="panel-body">
                             @include('include.showError')
                             @include('include.validationError')
-                            <form class="form-horizontal" action="" method="post"
+                            <form class="form-horizontal" action="{{ route('adminpostuser') }}" method="post"
                                   enctype="multipart/form-data">
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
+                                @csrf
                                     <legend></legend>
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">First and last name</label>
@@ -31,7 +32,7 @@
                                         <label class="col-lg-2 control-label">Phone Number</label>
                                         <div class="col-lg-10">
                                             <input type="text" required="required"
-                                                   oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
+                                                   oninvalid="this.setCustomValidity('Cant be empty')"
                                                    onchange="this.setCustomValidity('')" name="phone"
                                                    class="form-control" placeholder="Enter Your Phone Number">
                                             <div class="help-block with-errors"></div>
@@ -75,7 +76,13 @@
                                         <label class="col-lg-2 control-label">نقش کاربر</label>
                                         <div class="col-lg-10">
                                             <select name="role" class="form-control" style="height: 40px">
-                                                <option value="">مدیر</option>
+                                                @foreach ($roles as $role )
+                                                    
+                                                
+                                                
+                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                                
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

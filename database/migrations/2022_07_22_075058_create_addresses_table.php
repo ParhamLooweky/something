@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('detail');
             $table->integer('status');
-            $table->unsignedBigInteger('city_id')->nullable();
+            $table->unsignedBigInteger('city_id');
             $table->timestamps();
 
-            $table->foreign('city_id')->on('city')->references('id')->nullOnDelete()->cascadeOnUpdate();
+            $table->foreign('city_id')->on('cities')->references('id')->cascadeOnUpdate();
         });
     }
 

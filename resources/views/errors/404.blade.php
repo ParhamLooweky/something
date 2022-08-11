@@ -36,9 +36,9 @@
         <h1>{{ $exception->getStatusCode() }}</h1>
          @if($exception->getstatusCode()==404)
         @endif
-        <p class="page-404">لطفا بعدا مراجعه کنید <a href="{{ asset('/') }}">بازگشت به صفحه اصلی</a></p>
+        <p class="page-404"></p>Please Check The URL <a href="{{ asset('/') }}"> Return to main page  </a></p>
         <p class="page-404">
-            صفحه مورد نظر پیدا نشد
+        The requested page was not found
         </p>
     </section>
 

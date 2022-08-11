@@ -59,6 +59,9 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::get('/deletedRole','deleteRole')->name('deleterole');
         Route::get('/deletedAddress','deleteAddress')->name('deleteaddress');
 
+        //post routes\\
+        Route::post('/addRoles', 'adminPostUser')->name('adminpostuser');
+
 
 
         });
