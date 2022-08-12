@@ -58,7 +58,7 @@
                             <b class="caret"></b>
                             <ul class="dropdown-menu extended logout">
                                 <div class="log-arrow-up"></div>
-                                <li><a href=""><i class="icon-eject"></i> Ø®Ø±ÙˆØ¬</a></li>
+                                <li><a href=""><i class="icon-eject"></i>Log out</a></li>
                             </ul>
                         </span>
                     </a>
@@ -125,8 +125,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visitcat')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø¯Ø³ØªÙ‡ Ù‡Ø§</a></li>
-                        <li><a href="{{route('addcat')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ø¯Ø³ØªÙ‡</a></li>
+                        <li><a href="{{route('visitcat')}}" style="color: #f2f2f2">Manage categories</a></li>
+                        <li><a href="{{route('addcat')}}" style="color: #f2f2f2">Add categories</a></li>
                     </ul>
                 </li>
 
@@ -143,8 +143,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visittag')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªÚ¯ Ù‡Ø§</a></li>
-                        <li><a href="{{route('addtag')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† ØªÚ¯</a></li>
+                        <li><a href="{{route('visittag')}}" style="color: #f2f2f2">Manage tags</a></li>
+                        <li><a href="{{route('addtag')}}" style="color: #f2f2f2">Add tags</a></li>
                     </ul>
                 </li>
 
@@ -163,8 +163,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('visitdiscount')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªØ®Ù�ÛŒÙ� Ù‡Ø§</a></li>
-                        <li><a href="{{route('adddiscount')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† ØªØ®Ù�ÛŒÙ�</a></li>
+                        <li><a href="{{route('visitdiscount')}}" style="color: #f2f2f2">Manage discounts</a></li>
+                        <li><a href="{{route('adddiscount')}}" style="color: #f2f2f2">Add discounts</a></li>
                     </ul>
                 </li>
 
@@ -180,8 +180,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                       <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù…Ø­ØµÙˆÙ„Ø§Øª</a></li>
-                        <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ù…Ø­ØµÙˆÙ„Ø§Øª</a></li>
+                       <li><a href="{{route('visitproduct')}}" style="color: #f2f2f2">Manage Products</a></li>
+                        <li><a href="{{route('addproduct')}}" style="color: #f2f2f2">Add products</a></li>
                     </ul>
                 </li>
 
@@ -195,7 +195,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('admincomment')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù†Ø¸Ø± Ù‡Ø§</a></li>
+                        <li><a href="{{route('admincomment')}}" style="color: #f2f2f2">Manage comments</a></li>
                     </ul>
                 </li>
 
@@ -211,13 +211,13 @@
                 @endif">
                     <a href="javascript:;" class="">
                         <i class="icon-user"></i>
-                        <span>Manage</span>
+                        <span>Manage locations</span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminprovince')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø§Ø³ØªØ§Ù† Ù‡Ø§</a></li>
-                        <li><a href="{{route('addprovince')}}" style="color: #f2f2f2">Ø§Ù�Ø²ÙˆØ¯Ù† Ø§Ø³ØªØ§Ù†</a></li>
-                        <li><a href="{{route('admincity')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø´Ù‡Ø±</a></li>
+                        <li><a href="{{route('adminprovince')}}" style="color: #f2f2f2">Manage province</a></li>
+                        <li><a href="{{route('addprovince')}}" style="color: #f2f2f2">Add province</a></li>
+                        <li><a href="{{route('admincity')}}" style="color: #f2f2f2">Manage city</a></li>
                         <li><a href="{{route('addcity')}}" style="color: #f2f2f2">Add city</a></li>
                     </ul>
                 </li>
@@ -232,7 +232,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminaddress')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ø¢Ø¯Ø±Ø³ Ù‡Ø§</a></li>
+                        <li><a href="{{route('adminaddress')}}" style="color: #f2f2f2">Manage addresses</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu
@@ -246,7 +246,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('adminfactor')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª Ù�Ø§Ú©ØªÙˆØ± Ù‡Ø§</a></li>
+                        <li><a href="{{route('adminfactor')}}" style="color: #f2f2f2">Manage factors</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu
@@ -259,7 +259,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{route('admintransfer')}}" style="color: #f2f2f2">Ù„ÛŒØ³Øª ØªØ±Ø§Ú©Ù†Ø´ Ù‡Ø§</a></li>
+                        <li><a href="{{route('admintransfer')}}" style="color: #f2f2f2">Manage transactions</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu

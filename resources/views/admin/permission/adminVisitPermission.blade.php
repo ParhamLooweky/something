@@ -22,7 +22,7 @@
                 $(this).html('<input class="form-control input-sm" type="text" placeholder="' + title + '" />');
             });
 
-            // DataTable
+            // DataTables
             var table = $('#orderTable').DataTable();
 
             // Apply the search
@@ -39,47 +39,47 @@
             });
         });
     </script>
-    <section id="main-content">
-        <section class="wrapper">
-            <section class="panel">
-                <header class="panel-heading">
-                    مدیریت سطوح دسترسی
+    <section style="background-color:#181818" id="main-content">
+        <section style="background-color:#181818"  class="wrapper">
+            <section style="background-color:#181818"   class="panel">
+                <header style="background-color:#181818"  class="panel-heading">
+                Manage levels of accesss
 
 
                 </header>
-                <div class="container">
+                <div style="background-color:#181818" class="container">
 
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 table-responsive">
+                    <div style="background-color: background-color:#181818  " class="col-xs-12 col-sm-12 col-md-12 table-responsive">
                         <br/>
 
-                        <table id="orderTable" class="table table-striped">
+                        <table style="background-color:#181818"   id="orderTable" class="table table-striped">
                             <thead>
-                            <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">نام دسترسی</th>
-                                <th class="hidden-phone" style="text-align: right">شرح دسترسی</th>
-                                <th class="hidden-phone" style="text-align: right">امکانات</th>
+                            <tr style="background-color:#181818" >
+                                <th style="text-align: left;background-color:#181818">ID</th>
+                                <th style="text-align: left;background-color:#181818">Access name</th>
+                                <th class="hidden-phone" style="text-align: left;background-color:#181818">Description</th>
+                                <th class="hidden-phone" style="text-align: left;background-color:#181818">Permissions</th>
                             </tr>
                             </thead>
                             <tfoot style="direction: rtl;">
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">نام دسترسی</th>
-                                <th class="hidden-phone" style="text-align: right">شرح دسترسی</th>
-                                <th class="hidden-phone" style="text-align: right">امکانات</th>
+                                <th style="text-align: left;background-color: rgba(30, 30, 30, 1 )">ID</th>
+                                <th style="text-align: left; background-color: rgba(30, 30, 30, 1 )">Access name</th>
+                                <th class="hidden-phone" style="text-align: left;background-color: rgba(30, 30, 30, 1 )">Description</th>
+                                <th class="hidden-phone" style="text-align: left;background-color: rgba(30, 30, 30, 1 )">Permissions</th>
                             </tr>
                             </tfoot>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="hidden-phone">دسترسی آزاد</td>
-                                    <td class="hidden-phone">free-access</td>
-                                    <td>
-                                        <a class="label label-danger" data-toggle="modal"
-                                           href="#myModal1">حذف</a>
+                                    <td style="background-color:#181818; color:white;" >1</td>
+                                    <td style="background-color:#181818; color:white;"   class="hidden-phone">Normal access</td>
+                                    <td style="background-color:#181818; color:white;"  class="hidden-phone">free-access</td>
+                                    <td style="background-color:#181818; color:white;  >
+                                        <a class="label label-danger"" data-toggle="modal"
+                                           href="#myModal1">Delete</a>
                                         <a class="label label-success"
-                                           href="{{ route('updateperm',[1]) }}">ویرایش</a>
+                                           href="{{ route('updateperm',[1]) }}">Update</a>
                                     </td>
 
                                     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
@@ -90,17 +90,16 @@
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-hidden="true">&times;
                                                     </button>
-                                                    <h4 class="modal-title">حذف دسترسی آزاد</h4>
+                                                    <h4 class="modal-title">Deleting Access level</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    ایا از این عمل اطمینان دارید؟
-
+													Are you sure you want to do this?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button href="{{ route('permvisit') }}" data-dismiss="modal" class="btn btn-warning" type="button">
-                                                        خیر
+															Go back
                                                     </button>
-                                                    <a href="{{ route('deletepermission') }}" class="btn btn-danger" type="button">آری</a>
+                                                    <a href="{{ route('deletepermission') }}" class="btn btn-danger" type="button">Yes</a>
                                                 </div>
                                             </div>
                                         </div>
