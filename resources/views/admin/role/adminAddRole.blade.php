@@ -9,8 +9,7 @@
                     <section class="panel">
                         <header class="panel-heading">
 
-                            افزودن نقش
-
+                            Role name
                         </header>
                         <div class="panel-body">
 
@@ -20,10 +19,10 @@
                                 <form class="form-horizontal" action="" method="post"
                                       data-toggle="validator" id="user-form">
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">نام نقش</label>
+                                        <label class="col-lg-2 control-label">Role name</label>
                                         <div class="col-lg-10">
                                             <input value="" type="text" required="required" name="name"
-                                                   class="form-control" placeholder="نام نقش">
+                                                   class="form-control" placeholder="Role name">
                                         </div>
                                     </div>
 

@@ -46,6 +46,7 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::get('/Contact', 'adminContact')->name('admincontact');
         //update routes\\
         Route::get('/updateUser/{id}', 'updateUser')->name('updateuser');
+        Route::post('/updateUser/{id}', 'updateUser')->name('updateuserpost');
         Route::get('/updatePermission/{id}', 'updatePermission')->name('updateperm');
         Route::get('/updateCategory/{id}', 'updateCategory')->name('updatecat');
         Route::get('/updateTag/{id}', 'updateTag')->name('updatetag');

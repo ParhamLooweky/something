@@ -4,7 +4,7 @@ namespace app\Actions;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use Spatie\Permission\Contracts\Role;
+use Spatie\Permission\Models\Role;
 
 class UserAction{
     public static function addUser($request){
@@ -31,13 +31,31 @@ class UserAction{
         $newUser = new User();
 
         $newUser->name = $request->input('name');
-        $newUser->phone = $phone;
-        $newUser->email = $email;
+        $newUser->phone = $request->input('phone');
+        $newUser->email = $request->input('email');
         $newUser->password = Hash::make($request->input('password'));
         $newUser->status = $request->input('status');
         $newUser->save();
         
         $newUser->syncRoles(Role::findById($request->input('role')));
         return $uniqueParameter;
+    }
+
+
+    private static function checkPhone($phone){
+        $check= User::where('phone',$phone)->first();
+        if($check)
+            return true;
+        else
+            return false;
+    }
+
+    private static function checkEmail($email){
+        $check= User::where('email',$email)->first();
+        if($check)
+            return true;
+        else
+            return false;
+        
     }
 }

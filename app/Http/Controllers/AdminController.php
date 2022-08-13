@@ -30,8 +30,14 @@ class AdminController extends Controller
     }
     public function adminPostUser(UserNameRequest $request){
         $action = UserAction::addUser($request);
-    
+        if ($action['phone']==1)
+            return redirect()->back()->with('danger','This phone number exists');
+        if($action['email']==1)
+            redirect()->back()->with('danger','This email already exists');
+
+            return redirect(route('adminvisit'));
     }
+
     public function adminPerm(){
         return view('admin.permission.adminVisitPermission');
     }
@@ -113,7 +119,13 @@ class AdminController extends Controller
     }
     // update functions \\
     public function updateUser(){
+
+        
+        
+        
         return view('admin.user.adminUpdateUser');
+        
+
     }
 
     public function updatePermission(){
