@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
+encoding//database/seeders/DiscountSeeder.php=UTF-8
 encoding//resources/views/admin/layout/adminLayout.blade.php=UTF-8
 encoding//resources/views/admin/permission/adminVisitPermission.blade.php=UTF-8
