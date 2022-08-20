@@ -14,14 +14,15 @@
                             @include('include.showError')
                             @include('include.validationError')
 
-                            <form class="form-horizontal" action=""
+                            <form class="form-horizontal" action="{{ route('updateuserpost', $user->id) }}"
                                   method="post" enctype="multipart/form-data">
+                                  @csrf
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
                                     <legend></legend>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">نام و نام خانوادگی</label>
+                                        <label class="col-lg-2 control-label">Name</label>
                                         <div class="col-lg-10">
-                                            <input value="" type="text" required="required"
+                                            <input value="{{ $user->name }}" type="text" required="required"
                                                    oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
                                                    onchange="this.setCustomValidity('')" name="name"
                                                    class="form-control"
@@ -29,9 +30,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">شماره تماس</label>
+                                        <label class="col-lg-2 control-label">Phone Number</label>
                                         <div class="col-lg-10">
-                                            <input value="" type="text" required="required"
+                                            <input value="{{ $user->phone }}" type="text" required="required"
                                                    oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
                                                    onchange="this.setCustomValidity('')" name="phone"
                                                    class="form-control" placeholder="شماره تماس خود را وارد کنید">
@@ -42,46 +43,50 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">پست الکترونیک</label>
                                         <div class="col-lg-10">
-                                            <input value="" type="text" required="required"
-                                                   oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
-                                                   onchange="this.setCustomValidity('')" name="email"
+                                            <input value="{{ $user->email }}" type="text"
+                                                   name="email"
                                                    class="form-control" placeholder="پست الکترونیک خود را وارد کنید">
                                             <div class="help-block with-errors"></div>
 
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">رمز عبور</label>
+                                        <label class="col-lg-2 control-label">Password</label>
                                         <div class="col-lg-10">
-                                            <input type="text" onchange="this.setCustomValidity('')" name="password"
+                                            <input type="text"  name="password"
                                                    class="form-control"
-                                                   placeholder="در صورت نیاز به تغییر رمز عبور، رمز عبور جدید را وادر کنید">
+                                                   placeholder="If you want to change your password enter a new one.">
                                             <div class="help-block with-errors"></div>
 
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">وضعیت کاربر</label>
+                                        <label class="col-lg-2 control-label">User status</label>
                                         <div class="col-lg-10">
                                             <select name="status" class="form-control" style="height: 40px">
-                                                <option value="0" selected>غیر فعال</option>
-                                                <option value="1">فعال</option>
+                                                <option @if($user->status == 0) selected @endif value="0" selected>Deacitve</option>
+                                                <option @if($user->status == 1) selected @endif value="1">Active</option>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">نقش کاربر</label>
+                                        <label class="col-lg-2 control-label"> User role</label>
                                         <div class="col-lg-10">
                                             <select name="role" class="form-control" style="height: 40px">
-                                                    <option value="" selected>مدیر</option>
+                                                    @foreach ($roles as $role )
+                                                        <option value="{{ $role->id }}" @if (\App\Models\Tool::userHasRole($role->id, $user->id)) selected @endif >
+                                                            
+                                                        {{ $role->name }}</option>
+
+                                                    @endforeach
                                             </select>
                                         </div>
                                     </div>
 
                                 </fieldset>
-                                <input type="submit" class="finish btn btn-danger" value="تایید"/>
+                                <input type="submit" class="finish btn btn-danger" value="Accept"/>
                             </form>
                         </div>
                     </section>

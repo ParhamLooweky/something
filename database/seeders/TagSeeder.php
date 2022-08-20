@@ -22,6 +22,5 @@ class TagSeeder extends Seeder
             ['label' => 'Kids'],
         ];
 
-        Tag::insert($Tags);
     }
 }

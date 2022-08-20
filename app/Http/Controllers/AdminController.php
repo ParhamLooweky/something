@@ -118,13 +118,27 @@ class AdminController extends Controller
         return view('admin.contact.adminVisitContact');
     }
     // update functions \\
-    public function updateUser(){
+    public function updateUser($user_id){
+        $user = User::find($user_id);
+
+        $roles= Role::all();
 
         
         
         
-        return view('admin.user.adminUpdateUser');
+        return view('admin.user.adminUpdateUser', compact('user', 'roles'));
         
+
+    }
+
+    public function updatePostUser(Request $request, $user_id){
+        $action = UserAction::updateUser($request);
+        if ($action['phone']==1)
+            return redirect()->back()->with('danger','This phone number exists');
+        if($action['email']==1)
+            redirect()->back()->with('danger','This email already exists');
+
+        return redirect(route('adminvisit'));
 
     }
 

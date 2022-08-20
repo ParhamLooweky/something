@@ -32,6 +32,5 @@ class DiscountSeeder extends Seeder
             ]
             
         ];
-        Discount::insert($discounts);
     }
 }

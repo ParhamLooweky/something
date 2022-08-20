@@ -21,6 +21,9 @@ class UserAction{
             $uniqueParameter['email'] = 1;
             return $uniqueParameter;
         }
+
+    
+   
         
         
         
@@ -57,5 +60,9 @@ class UserAction{
         else
             return false;
         
+    }
+
+    public static function updateUser($request, $user_id){
+        $newUser = User::find($user_id);
     }
 }

@@ -16,9 +16,8 @@ class PermissionSeeder extends Seeder
     public function run()
     {
         $permission = [
-            ['name' => 'free_access', 'guard_name' => 'web'],
-            ['name' => 'limit_access', 'guard_name' => 'web']
+            ['name' => 'full_access', 'guard_name' => 'web'],
+            ['name' => 'limited_access', 'guard_name' => 'web']
         ];
-        Permission::insert($permission);
     }
 }
