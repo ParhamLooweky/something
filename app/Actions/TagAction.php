@@ -12,6 +12,8 @@ class TagAction{
         $newTag->status = $grab->input('status');
 
         $newTag->save();
+
+        return back();
         
     }
 }

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use app\Actions\PermissionAction;
 use App\Actions\UserAction;
 use App\Http\Requests\UserNameRequest;
 use App\Models\User;
+use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 
@@ -39,11 +42,23 @@ class AdminController extends Controller
     }
 
     public function adminPerm(){
-        return view('admin.permission.adminVisitPermission');
+        $permissions = Permission::all();
+        
+        
+        return view('admin.permission.adminVisitPermission',compact('permissions'));
+
     }
     public function adminAddPerm(){
+
         return view('admin.permission.adminAddPermission');
     }
+
+    public function adminPostPermission(Request $request, $permission_id){
+        PermissionAction::newPermission($request, $permission_id);
+        return redirect(route('permvisit'));
+        
+    }
+
     public function adminRoles(){
         return view('admin.role.adminVisitRole');
     }
@@ -132,7 +147,7 @@ class AdminController extends Controller
     }
 
     public function updatePostUser(Request $request, $user_id){
-        $action = UserAction::updateUser($request);
+        $action = UserAction::updateUser($request, $user_id);
         if ($action['phone']==1)
             return redirect()->back()->with('danger','This phone number exists');
         if($action['email']==1)
@@ -142,8 +157,12 @@ class AdminController extends Controller
 
     }
 
-    public function updatePermission(){
+    public function updatePermission(Permission $permission){
+
         return view('admin.permission.adminUpdatePermission');
+    }
+    public function updatePostPermission($request, Permission $permission){
+        ;
     }
 
     public function updateCategory(){

@@ -16,7 +16,8 @@ use App\Models\Discount;
         $newDiscount->percent = $request->input('percent');
         
         $newDiscount->save();
-     }
+        return back();
+    }
  }
  
  ?>

@@ -19,18 +19,20 @@ class DiscountSeeder extends Seeder
             [
                 'label' => 'Weekend discounts',
                 'price' => '500',
-                'percent' => null,
-                'gift_code' => null,
+                'percentage' => null,
+                'gift_code' => 'wewewe',
                 'status' => 1
             ],
             [
                 'label' => 'Special occasions discount',
                 'price' => 1000,
-                'percent' => null,
+                'percentage' => null,
                 'gift_code' => 'wqwqwq',
                 'status' => 0
             ]
             
         ];
+
+        Discount::insert($discounts);
     }
 }

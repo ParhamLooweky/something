@@ -47,7 +47,8 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         //update routes\\
         Route::get('/updateUser/{id}', 'updateUser')->name('updateuser');
         Route::post('/updateUser/{id}', 'updatePostUser')->name('updateuserpost');
-        Route::get('/updatePermission/{id}', 'updatePermission')->name('updateperm');
+        Route::get('/updatePermission/{permission}', 'updatePermission')->name('updateperm');
+        Route::get('/updatePermission/{permission}', 'updatePostPermission')->name('updateperm');
         Route::get('/updateCategory/{id}', 'updateCategory')->name('updatecat');
         Route::get('/updateTag/{id}', 'updateTag')->name('updatetag');
         Route::get('/updateDiscount/{id}', 'updateDiscount')->name('updatediscount');
@@ -62,6 +63,8 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
 
         //post routes\\
         Route::post('/addRoles', 'adminPostUser')->name('adminpostuser');
+        Route::post('/addPermission', 'adminPostPermission')->name('adminpostpermission');
+
 
 
 

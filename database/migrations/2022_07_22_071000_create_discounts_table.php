@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('discounts', function (Blueprint $table) {
             $table->id();
             $table->string('label');
-            $table->decimal('percentage');
+            $table->decimal('percentage')->nullable();
             $table->decimal('price');
-            $table->integer('status');
-            $table->string('gift_code');
+            $table->integer('status')->default(1);
+            $table->string('gift_code')->nullable();
             $table->timestamps();
         });
     }

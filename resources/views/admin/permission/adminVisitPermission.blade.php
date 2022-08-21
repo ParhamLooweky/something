@@ -71,18 +71,23 @@
                             </tr>
                             </tfoot>
                             <tbody>
+                            @foreach ($permissions as $permission )
+                                
                                 <tr>
-                                    <td style="background-color:#181818; color:white;" >1</td>
-                                    <td style="background-color:#181818; color:white;"   class="hidden-phone">Normal access</td>
-                                    <td style="background-color:#181818; color:white;"  class="hidden-phone">free-access</td>
-                                    <td style="background-color:#181818; color:white;  >
-                                        <a class="label label-danger"" data-toggle="modal"
+                                    <td style="background-color:#181818; color:white;" >{{ $permission->id }}</td>
+                                    <td style="background-color:#181818; color:white;"   class="hidden-phone">{{ $permission->name }}</td>
+                                    <td style="background-color:#181818; color:white;"  class="hidden-phone">{{ $permission->guard_name }}</td>
+                                    <td style="background-color:#181818; color:white;">
+
+                                        <a class="label label-danger" data-toggle="modal"
                                            href="#myModal1">Delete</a>
                                         <a class="label label-success"
                                            href="{{ route('updateperm',[1]) }}">Update</a>
                                     </td>
+                            @endforeach
 
-                                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog"
+
+                                    <div class="modal fade" id="myModall{{ $permission->id }}" tabindex="-1" role="dialog"
                                          aria-labelledby="myModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -90,7 +95,7 @@
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-hidden="true">&times;
                                                     </button>
-                                                    <h4 class="modal-title">Deleting Access level</h4>
+                                                    <h4 class="modal-title">Deleting {{ $permission->name }}</h4>
                                                 </div>
                                                 <div class="modal-body">
 													Are you sure you want to do this?
