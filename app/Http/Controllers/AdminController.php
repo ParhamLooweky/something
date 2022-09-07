@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use app\Actions\PermissionAction;
+use App\Actions\ProductAction;
 use App\Actions\RoleAction;
 use app\Actions\TagAction;
 use App\Actions\Tagg;
 use App\Actions\UserAction;
 use App\Http\Requests\UserNameRequest;
+use App\Models\Category;
+use App\Models\Discount;
 use App\Models\Product;
 use App\Models\Tag;
 use App\Models\User;
-use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
@@ -121,7 +123,17 @@ class AdminController extends Controller
     }
 
     public function adminAddProducts(){
-        return view('admin.product.adminAddProduct');
+        $discounts = Discount::all();
+        $tags = Tag::all();
+        $categories = Category::all();
+        return view('admin.product.adminAddProduct',compact('discounts','tags','categories'));
+    }
+
+    public function postAddProduct(Request $request){
+
+        ProductAction::addProduct($request);
+
+        return redirect(route('productvisit'));
     }
     public function adminComment(){
         return view('admin.comment.adminVisitComment');

@@ -29,4 +29,8 @@ class Tool
 
 
     }
+
+    public static function imagePath(){
+        return 'public/images';
+    }
 }

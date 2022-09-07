@@ -14,76 +14,92 @@
                             @include('include.showError')
                             @include('include.validationError')
 
-                            <form class="form-horizontal" action="" method="post"
+                            <form class="form-horizontal" action="{{ route('postaddproduct') }}" method="post"
                                   enctype="multipart/form-data">
+                                  @csrf
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
-                                    <legend></legend>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">عنوان محصول</label>
-                                        <div class="col-lg-10">
-                                            <input type="text" required="required"
-                                                   oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
-                                                   onchange="this.setCustomValidity('')" name="label"
-                                                   class="form-control" placeholder="عنوان محصول">
-                                        </div>
+                                <legend></legend>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">عنوان محصول</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" required="required"
+                                                oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
+                                                onchange="this.setCustomValidity('')" name="label"
+                                                class="form-control" placeholder="عنوان محصول">
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">مبلغ محصول</label>
-                                        <div class="col-lg-10">
-                                            <input type="text" name="price" class="form-control"
-                                                   placeholder="مبلغ محصول">
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">مبلغ محصول</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="price" class="form-control"
+                                                placeholder="مبلغ محصول">
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">شرح محصول</label>
-                                        <div class="col-lg-10">
-                                            <textarea name="description" class="form-control"> </textarea>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">تعداد موجودی محصول</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" name="count" class="form-control"
+                                                placeholder="تعداد موجودی محصول">
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">شرح محصول</label>
+                                    <div class="col-lg-10">
+                                        <textarea name="description" class="form-control"> </textarea>
+                                    </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">وضعیت محصول</label>
-                                        <div class="col-lg-10">
-                                            <select name="status" class="form-control" style="height: 40px">
-                                                <option value="0" selected>غیر فعال</option>
-                                                <option value="1">فعال</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">وضعیت محصول</label>
+                                    <div class="col-lg-10">
+                                        <select name="status" class="form-control" style="height: 40px">
+                                            <option value="0" selected>غیر فعال</option>
+                                            <option value="1">فعال</option>
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">وضعیت تخفیف</label>
-                                        <div class="col-lg-10">
-                                            <select name="discount_id" class="form-control" style="height: 40px">
-                                                <option value="">تخفیف ندارد</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">وضعیت تخفیف</label>
+                                    <div class="col-lg-10">
+                                        <select name="discount_id" class="form-control" style="height: 40px">
+                                            <option value="">تخفیف ندارد</option>
+                                            @foreach ($discounts as $discount)
+                                                <option value="{{ $discount->id }}">{{ $discount->label }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">وضعیت دسته بندی</label>
-                                        <div class="col-lg-10">
-                                            <select name="category_id" class="form-control" style="height: 40px">
-                                                <option value="">لباس</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">وضعیت دسته بندی</label>
+                                    <div class="col-lg-10">
+                                        <select name="category_id" class="form-control" style="height: 40px">
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->label }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">تگ ها</label>
-                                        <div class="col-lg-10">
-                                            <label class="access_lvl">
-                                                <input type="checkbox" name="tags[]" value="">تگ پیشقرض
-                                            </label>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">تگ ها</label>
+                                    <div class="col-lg-10">
+                                        <label class="access_lvl">
+                                            @foreach ($tags as $tag)
+                                                <input type="checkbox" name="tags[]" value="{{ $tag->id }}"> {{ $tag->label }} <br>
+                                            @endforeach
+                                        </label>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-lg-2 control-label">تصاویر</label>
-                                        <div class="col-lg-10">
-                                            <input type="file" id="images" name="images[]" multiple>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label">تصاویر</label>
+                                    <div class="col-lg-10">
+                                        <input type="file" id="images" name="images[]" multiple>
                                     </div>
-
+                                </div>
                                 </fieldset>
                                 <input type="submit" class="finish btn btn-danger" value="تایید"/>
                             </form>
+
+                            
                         </div>
                     </section>
                 </div>
