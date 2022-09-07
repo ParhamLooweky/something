@@ -2,6 +2,7 @@
 
 namespace App\Actions;
 
+<<<<<<< HEAD
 use App\Models\Image;
 use App\Models\Product;
 use App\Models\Tool;
@@ -67,4 +68,10 @@ class ProductAction{
     //     File::delete($image->path);
     //     $image->delete();
     // }
+=======
+class ProductAction{
+    function addProduct(){
+        ;
+    }
+>>>>>>> d1a516c6655595f867117ed19569a81b415b097e
 }

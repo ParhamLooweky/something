@@ -3,14 +3,20 @@
 namespace App\Http\Controllers;
 
 use app\Actions\PermissionAction;
+<<<<<<< HEAD
 use App\Actions\ProductAction;
+=======
+>>>>>>> d1a516c6655595f867117ed19569a81b415b097e
 use App\Actions\RoleAction;
 use app\Actions\TagAction;
 use App\Actions\Tagg;
 use App\Actions\UserAction;
 use App\Http\Requests\UserNameRequest;
+<<<<<<< HEAD
 use App\Models\Category;
 use App\Models\Discount;
+=======
+>>>>>>> d1a516c6655595f867117ed19569a81b415b097e
 use App\Models\Product;
 use App\Models\Tag;
 use App\Models\User;
