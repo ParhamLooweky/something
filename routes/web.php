@@ -67,10 +67,7 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::post('/addPermission', 'adminPostPermission')->name('adminpostpermission');
         Route::post('/addTag', 'postAddTag')->name('postaddtag');
         Route::post('/addRole', 'postAddRole')->name('postaddrole');
-<<<<<<< HEAD
         Route::post('/addProduct','postAddProduct')->name('postaddproduct');
-=======
->>>>>>> d1a516c6655595f867117ed19569a81b415b097e
 
 
 

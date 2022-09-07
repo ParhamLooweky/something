@@ -4,7 +4,7 @@ namespace app\Actions;
 use Spatie\Permission\Models\Permission;
 
 class PermissionAction {
-    function newPermission($request) {
+   static function newPermission($request) {
         
         Permission::create($request->all());
 

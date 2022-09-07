@@ -17,9 +17,9 @@ class Tagg {
         return back();
     }
 
-    public static function updateTag($request, $tag_id){
-        ;
-    }
+    // public static function updateTag($request, $tag_id){
+    //     ;
+    // }
 
 
         

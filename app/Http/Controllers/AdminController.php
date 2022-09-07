@@ -3,20 +3,14 @@
 namespace App\Http\Controllers;
 
 use app\Actions\PermissionAction;
-<<<<<<< HEAD
 use App\Actions\ProductAction;
-=======
->>>>>>> d1a516c6655595f867117ed19569a81b415b097e
 use App\Actions\RoleAction;
-use app\Actions\TagAction;
 use App\Actions\Tagg;
 use App\Actions\UserAction;
 use App\Http\Requests\UserNameRequest;
-<<<<<<< HEAD
 use App\Models\Category;
 use App\Models\Discount;
-=======
->>>>>>> d1a516c6655595f867117ed19569a81b415b097e
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Tag;
 use App\Models\User;
@@ -91,7 +85,8 @@ class AdminController extends Controller
     }
 
     public function adminCategory(){
-        return view('admin.category.adminVisitCategory');
+        $categories = Category::all();
+        return view('admin.category.adminVisitCategory',compact('categories'));
     }
 
     public function adminAddCategory(){
@@ -135,9 +130,11 @@ class AdminController extends Controller
         return view('admin.product.adminAddProduct',compact('discounts','tags','categories'));
     }
 
-    public function postAddProduct(Request $request){
+    public function postAddProduct(Request $request, Image $images){
 
-        ProductAction::addProduct($request);
+       ProductAction::addProduct($request);
+
+       Image::all($images);
 
         return redirect(route('productvisit'));
     }

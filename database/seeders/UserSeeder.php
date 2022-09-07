@@ -33,6 +33,7 @@ class UserSeeder extends Seeder
             'status'=> 1,
             'password'=> Hash::make('123456')
         ]);
+        
 
         $user->syncRoles(Role::findByName('admin'));
     

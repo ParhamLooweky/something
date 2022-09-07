@@ -74,18 +74,22 @@
                             </tr>
                             </tfoot>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>دسته اصلی</td>
-                                <td>مردانه</td>
-                                <td><p class="label label-success" style="width: 250px">فعال</p></td>
-                                <td>
-                                    <a class="label label-warning"
-                                       href="{{ route('updatecat',[1]) }}">ویرایش</a>
-                                    <a class="label label-info"
-                                       href="">افزودن +</a>
-                                </td>
-                            </tr>
+                                @foreach ($categories as $category )
+                                <tr>
+                                    <td>{{$category->id}}</td>
+                                    <td>*NULL!!*</td>
+                                    <td>{{$category->label}}</td>
+                                    <td><p class="label label-success" style="width: 250px">{{$category->status}}</p></td>
+                                    <td>
+                                        <a class="label label-warning"
+                                           href="{{ route('updatecat',[1]) }}">Edit</a>
+                                        <a class="label label-info"
+                                           href="">افزودن +</a>
+                                    </td>
+                                </tr>
+                                    
+                                @endforeach
+                           
                             </tbody>
                         </table>
                     </div>

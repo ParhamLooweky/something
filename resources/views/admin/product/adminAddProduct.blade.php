@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <section class="panel">
-                        <header class="panel-heading">افزودن محصول
+                        <header class="panel-heading">Add product
 
                         </header>
                         <div class="panel-body">
@@ -20,19 +20,19 @@
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
                                 <legend></legend>
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">عنوان محصول</label>
+                                    <label class="col-lg-2 control-label">Product name</label>
                                     <div class="col-lg-10">
                                         <input type="text" required="required"
                                                 oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
                                                 onchange="this.setCustomValidity('')" name="label"
-                                                class="form-control" placeholder="عنوان محصول">
+                                                class="form-control" placeholder="name">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">مبلغ محصول</label>
+                                    <label class="col-lg-2 control-label"> Product price</label>
                                     <div class="col-lg-10">
                                         <input type="text" name="price" class="form-control"
-                                                placeholder="مبلغ محصول">
+                                                placeholder="price">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">تگ ها</label>
+                                    <label class="col-lg-2 control-label">Tags</label>
                                     <div class="col-lg-10">
                                         <label class="access_lvl">
                                             @foreach ($tags as $tag)
@@ -90,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-lg-2 control-label">تصاویر</label>
+                                    <label class="col-lg-2 control-label">Images</label>
                                     <div class="col-lg-10">
                                         <input type="file" id="images" name="images[]" multiple>
                                     </div>
@@ -150,9 +150,9 @@
 
         $(function () {
             $('#default').stepy({
-                backLabel: 'قبلی',
+                backLabel: 'back',
                 block: true,
-                nextLabel: 'بعدی',
+                nextLabel: 'next',
                 titleClick: true,
                 titleTarget: '.stepy-tab'
             });

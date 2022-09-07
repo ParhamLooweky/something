@@ -20,6 +20,7 @@ class TagSeeder extends Seeder
             ['label' => 'Pants'],
             ['label' => 'Dress'],
             ['label' => 'Kids'],
+            ['label' => 'Sport'],
         ];
 
         Tag::insert($Tags);

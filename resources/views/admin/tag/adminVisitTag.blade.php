@@ -77,7 +77,7 @@
                                 <tr>
                                     <td>{{ $tag->id }}</td>
                                     <td>{{ $tag->label }}</td>
-                                    <td><p class="label label-warning" style="width: 250px">{{ $tag->status }}</p></td>
+                                    <td><p class="label label-success" style="width: 250px">{{ $tag->status }}</p></td>
                                     <td>
                                         <a class="label label-warning" href="{{ route('updatetag',[1]) }}">Edit</a>
                                     </td>
