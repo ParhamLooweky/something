@@ -60,10 +60,13 @@ Route::controller(\App\Http\Controllers\AdminController::class)->group(function 
         Route::get('/deletedUser','deleteAccess')->name('deletepermission');
         Route::get('/deletedRole','deleteRole')->name('deleterole');
         Route::get('/deletedAddress','deleteAddress')->name('deleteaddress');
+        Route::get('/deleteProductImage','deleteProductImage')->name('deleteproductimage');
 
         //post routes\\
         Route::post('/addRoles', 'adminPostUser')->name('adminpostuser');
         Route::post('/addPermission', 'adminPostPermission')->name('adminpostpermission');
+        Route::post('/addTag', 'postAddTag')->name('postaddtag');
+        Route::post('/addRole', 'postAddRole')->name('postaddrole');
 
 
 

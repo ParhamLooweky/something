@@ -45,7 +45,7 @@
         <section class="wrapper">
             <section class="panel">
                 <header class="panel-heading">
-                    مدیریت تگ ها
+                    Manage Tags
 
 
                 </header>
@@ -57,29 +57,32 @@
                         <table id="orderTable" class="table table-striped">
                             <thead>
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">عنوان</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">Name</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Options</th>
                             </tr>
                             </thead>
                             <tfoot style="direction: rtl;">
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">عنوان</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">Name</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Options</th>
                             </tr>
                             </tfoot>
                             <tbody>
+                            @foreach ($tags as $tag )
+                                
                                 <tr>
-                                    <td>1</td>
-                                    <td>پیشفرض</td>
-                                    <td><p class="label label-warning" style="width: 250px">غیر فعال</p></td>
+                                    <td>{{ $tag->id }}</td>
+                                    <td>{{ $tag->label }}</td>
+                                    <td><p class="label label-warning" style="width: 250px">{{ $tag->status }}</p></td>
                                     <td>
-                                        <a class="label label-warning" href="{{ route('updatetag',[1]) }}">ویرایش</a>
+                                        <a class="label label-warning" href="{{ route('updatetag',[1]) }}">Edit</a>
                                     </td>
                                 </tr>
+                             @endforeach
                             </tbody>
 
                         </table>

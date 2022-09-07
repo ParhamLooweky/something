@@ -25,7 +25,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             DiscountSeeder::class,
             PermissionSeeder::class,
+            CategorySeeder::class,
             TagSeeder::class,
+            ProductSeeder::class,
+
+            
         ]);
     }
 }

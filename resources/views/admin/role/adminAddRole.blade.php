@@ -9,15 +9,16 @@
                     <section class="panel">
                         <header class="panel-heading">
 
-                            Role name
+                            Add role
                         </header>
                         <div class="panel-body">
 
 
                             <div class="form">
 
-                                <form class="form-horizontal" action="" method="post"
+                                <form class="form-horizontal" action="{{ route('postaddrole') }}" method="post"
                                       data-toggle="validator" id="user-form">
+                                      @csrf
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">Role name</label>
                                         <div class="col-lg-10">
@@ -37,9 +38,14 @@
                                     <div class="form-group">
                                         <label class="col-lg-2 control-label">سطوح دسترسی</label>
                                         <div class="col-lg-10">
+                                        @foreach ( $permissions as $permission )
                                                 <label class="access_lvl">
-                                                    <input type="checkbox" name="permissions[]" value=""> </label>
+                                                    <input type="checkbox" name="permissions[]" value="{{ $permission->id }}">
+                                                    {{ $permission->name  }} 
+                                                    
+                                                </label>
                                                 <br/>
+                                        @endforeach
                                         </div>
                                     </div>
                                     <input type="submit" class="finish btn btn-success" value="ذخیره"/>

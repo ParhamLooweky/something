@@ -58,84 +58,112 @@
                         <table id="orderTable" class="table table-striped">
                             <thead>
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">عنوان</th>
-                                <th style="text-align: right">تخفیف</th>
-                                <th style="text-align: right">تگ</th>
-                                <th style="text-align: right">دسته</th>
-                                <th style="text-align: right">مبلغ</th>
-                                <th style="text-align: right">توضیحات</th>
-                                <th style="text-align: right">عکس</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">Name</th>
+                                <th style="text-align: right">Discount</th>
+                                <th style="text-align: right">Tag</th>
+                                <th style="text-align: right">Category</th>
+                                <th style="text-align: right">Price</th>
+                                <th style="text-align: right">Description</th>
+                                <th style="text-align: right">Image</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Options</th>
                             </tr>
                             </thead>
                             <tfoot style="direction: rtl;">
                             <tr>
-                                <th style="text-align: right">شناسه</th>
-                                <th style="text-align: right">عنوان</th>
-                                <th style="text-align: right">تخفیف</th>
-                                <th style="text-align: right">تگ</th>
-                                <th style="text-align: right">دسته</th>
-                                <th style="text-align: right">مبلغ</th>
-                                <th style="text-align: right">توضیحات</th>
-                                <th style="text-align: right">عکس</th>
-                                <th style="text-align: right">وضعیت</th>
-                                <th style="text-align: right;width: 15%">امکانات</th>
+                                <th style="text-align: right">ID</th>
+                                <th style="text-align: right">Name</th>
+                                <th style="text-align: right">Discount</th>
+                                <th style="text-align: right">Tag</th>
+                                <th style="text-align: right">Category</th>
+                                <th style="text-align: right">Price</th>
+                                <th style="text-align: right">Description</th>
+                                <th style="text-align: right">Image</th>
+                                <th style="text-align: right">Status</th>
+                                <th style="text-align: right;width: 15%">Options</th>
                             </tr>
                             </tfoot>
                             <tbody>
+                                @foreach ($products as $product )
                                 <tr>
-                                    <td>1</td>
-                                    <td>هودی</td>
-                                    <td>تخفیف ندارد</td>
-                                    <td>تگ ندارد</td>
-                                    <td>تخفیف ندارد</td>
-                                    <td>800000 ريال</td>
-                                    <td>لباس بسیار عالی</td>
+                                    <td>{{ $product->id }}</td>
+                                    <td>{{ $product->label }}</td>
                                     <td>
-                                            <a data-toggle="modal" href="#myModal1">
-                                                <img height="100" width="80" alt=""
-                                                     src="{{asset('public')}}/assets/images/shop/hoodie1-1-90x114.jpg">
+                                        @if ($product->discount_id)
+                                            @if ($product->discount->price)
+                                                {{ $product->discount->price }} dollars
+                                                
+                                            @elseif ($product->discount->percent)
+                                                {{ $product->discount->percent }} Percent
+                                            @else
+                                                {{ $product->discount->gift_token }}
+                                            @endif
+                                        @else
+												No discount
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($product->tags)
+                                            <ol>
+                                                @foreach ($product->tags as $tag)
+                                                    <li>{{ $tag->label }}</li>
+                                                @endforeach
+                                            </ol>
+                                        @else
+                                            No tag
+                                        @endif
+                                    </td>
+                                    <td>{{ $product->category->label }}</td>
+                                    <td>{{ $product->price }} ريال</td>
+                                    <td>{{ $product->description }}</td>
+                                    <td>
+                                        @foreach ($product->images as $image)
+                                            <a data-toggle="modal" href="#myModal{{$image->id}}">
+                                                <img height="100" width="80" alt="{{$product->label}}"
+                                                    src="{{asset($image->path)}}">
                                             </a>
-                                            <div class="modal fade" id="myModal1" tabindex="-1"
-                                                 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="myModal{{$image->id}}" tabindex="-1"
+                                                role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                     aria-hidden="true">&times;
                                                             </button>
-                                                            <h4 class="modal-title">حذف عکس هودی</h4>
+                                                            <h4 class="modal-title">حذف عکس {{$product->label}}</h4>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <img height="500" width="500" alt=""
-                                                                 src="{{asset('public')}}/assets/images/shop/hoodie1-1-90x114.jpg">
+                                                            <img height="500" width="500" alt="{{$product->label}}"
+                                                                src="{{asset($image->path)}}">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button data-dismiss="modal" class="btn btn-warning"
                                                                     type="button">خیر
                                                             </button>
-                                                            <a href=""
-                                                               class="btn btn-danger" type="button">آری</a>
+                                                            <a href="{{route('deleteproductimage', $image->id)}}"
+                                                            class="btn btn-danger" type="button">آری</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        @endforeach
                                     </td>
                                     <td>
-                                        {{-- @if($product->status == 0)
-                                            <p class="label label-warning" style="width: 250px">غیر فعال</p>
-                                        @endif
-                                        @if($product->status == 1)
+                                        @if ($product->status == 0)
+                                            <p class="label label-danger" style="width: 250px">غیر فعال</p>
+                                        @else
                                             <p class="label label-success" style="width: 250px">فعال</p>
-                                        @endif --}}
+                                        @endif
                                     </td>
                                     <td>
                                         <a class="label label-warning"
-                                           href="{{route('updateproduct',[1])}}">ویرایش</a>
-                                    </td>
-                                </tr>
+                                           href="{{ route('updateproduct',$product) }}">ویرایش</a>
+                                        </td>
+                                    </tr>
+                                    
+                                @endforeach
+                                
                             </tbody>
 
                         </table>
