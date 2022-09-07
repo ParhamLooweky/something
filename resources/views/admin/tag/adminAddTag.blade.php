@@ -14,26 +14,27 @@
                             @include('include.showError')
                             @include('include.validationError')
 
-                            <form class="form-horizontal" action="" method="post"
+                            <form class="form-horizontal" action="{{ route('postaddtag') }}" method="post"
                                   enctype="multipart/form-data">
+                                  @csrf
                                 <fieldset title="اطلاعات پایه" class="step" id="default-step-0">
                                     <legend></legend>
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">نام تگ</label>
+                                        <label class="col-lg-2 control-label">Tag name</label>
                                         <div class="col-lg-10">
                                             <input type="text" required="required"
                                                    oninvalid="this.setCustomValidity('نمیتواند خالی باشد')"
                                                    onchange="this.setCustomValidity('')" name="label"
-                                                   class="form-control" placeholder="نام تگ">
+                                                   class="form-control" placeholder="Tag name">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-lg-2 control-label">وضعیت تگ</label>
+                                        <label class="col-lg-2 control-label">Tag status</label>
                                         <div class="col-lg-10">
                                             <select name="status" class="form-control" style="height: 40px">
-                                                <option value="0" selected>غیر فعال</option>
-                                                <option value="1">فعال</option>
+                                                <option value="0" selected>Deactive</option>
+                                                <option value="1">Active</option>
                                             </select>
                                         </div>
                                     </div>

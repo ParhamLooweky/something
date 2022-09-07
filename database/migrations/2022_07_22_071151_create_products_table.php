@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('discount_id')->nullable();
-            $table->unsignedBigInteger('tag_id')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->string('label');
             $table->decimal('price',20,2);

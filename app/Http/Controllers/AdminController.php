@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use app\Actions\PermissionAction;
+use App\Actions\RoleAction;
+use app\Actions\TagAction;
+use App\Actions\Tagg;
 use App\Actions\UserAction;
 use App\Http\Requests\UserNameRequest;
+use App\Models\Product;
+use App\Models\Tag;
 use App\Models\User;
 use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
@@ -60,11 +65,21 @@ class AdminController extends Controller
     }
 
     public function adminRoles(){
-        return view('admin.role.adminVisitRole');
+        $roles = Role::all();
+
+        return view('admin.role.adminVisitRole',compact('roles'));
     }
 
     public function adminAddRoles(){
-        return view('admin.role.adminAddRole');
+        $permissions= Permission::all();
+
+        return view('admin.role.adminAddRole', compact('permissions'));
+    }
+    public function postAddRole(Request $request){
+        RoleAction::addRole($request);
+
+        return redirect(route('visitrole'));
+
     }
 
     public function adminCategory(){
@@ -76,11 +91,20 @@ class AdminController extends Controller
     }
 
     public function adminVisitTag(){
-        return view('admin.tag.adminVisitTag');
+        $tags= Tag::all();
+
+        return view('admin.tag.adminVisitTag', compact('tags'));
     }
 
     public function adminAddTag(){
         return view('admin.tag.adminAddTag');
+    }
+
+    public function postAddTag(Request $request){
+        Tagg::addTag($request);
+
+
+        return redirect (route('visittag'));
     }
 
     public function adminDiscount(){
@@ -92,7 +116,8 @@ class AdminController extends Controller
     }
 
     public function adminProducts(){
-        return view('admin.product.adminVisitProduct');
+        $products = Product::all();
+        return view('admin.product.adminVisitProduct', compact('products'));
     }
 
     public function adminAddProducts(){

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('label');
             $table->unsignedBigInteger('parent_id')->nullable();
-            $table->integer('status');
+            $table->integer('status')->default(1);
             $table->unsignedBigInteger('discount_id')->nullable();
             $table->timestamps();
 

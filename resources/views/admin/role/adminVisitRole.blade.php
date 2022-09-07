@@ -62,17 +62,35 @@
                             <tr>
                                 <th style="text-align: right">شناسه</th>
                                 <th style="text-align: right">نام</th>
-                                <th style="text-align: right">شرح</th>
                                 <th style="text-align: right">تعداد فعالیت های مجاز</th>
-                                <th style="text-align: right;">امکانات</th>
+                                <th style="text-align: right;">Options</th>
                             </tr>
                             </tfoot>
                             <tbody>
+                            @foreach ($roles as $role )
+                                
+                            
                                 <tr>
-                                    <td>1</td>
-                                    <td>مدیر</td>
-                                    <td class="hidden-phone">admin</td>
-                                    <td class="hidden-phone"> دسترسی آزاد<br/></td>
+                                    <td>{{ $role->id }}</td>
+                                    <td>{{ $role->name }}</td>
+                                    <td><br/>
+                                        @if ($role->permissions)
+                                        
+                                            <ol>
+                                                @foreach ($role->permissions as $permission )
+                                    
+                                                <li>{{ $permission->name }}</li>
+                                        
+                                                @endforeach
+                                    
+                                            </ol>
+                                    
+                                    
+                                        @endif
+                                    
+                                    
+                                    </td>
+                                        
                                     <td>
                                         <a class="label label-danger" data-toggle="modal" href="#myModal1">حذف</a>
                                         <a class="label label-success" href="">ویرایش</a>
@@ -86,7 +104,7 @@
                                                     <button type="button" class="close" data-dismiss="modal"
                                                             aria-hidden="true">&times;
                                                     </button>
-                                                    <h4 class="modal-title">حذف مدیر</h4>
+                                                    <h4 class="modal-title">حذف {{ $role->name }}</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     ایا از این عمل اطمینان دارید؟
@@ -96,12 +114,13 @@
                                                     <button data-dismiss="modal" class="btn btn-warning" type="button">
                                                         خیر
                                                     </button>
-                                                    <a href="{{ route('deleterole') }}" class="btn btn-danger" type="button">آری</a>
+                                                    <a href="{{ route('deleterole ',$role->id ) }}" class="btn btn-danger" type="button">آری</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
